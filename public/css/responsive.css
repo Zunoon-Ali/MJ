@@ -1,0 +1,973 @@
+/*Media Query Start*/
+
+@media only screen and (min-width: 2801px) and (max-width: 2900px) {
+}
+
+@media only screen and (min-width: 2230px) and (max-width: 2800px) {
+  img.curve-img1 {
+    position: absolute;
+    width: 1190px;
+    top: 0;
+    left: 0;
+    height: 570px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+}
+
+@media only screen and (min-width: 2089px) and (max-width: 2229px) {
+  img.curve-img1 {
+    position: absolute;
+    width: 1010px;
+    top: 0;
+    left: 0;
+    height: 520px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2085px) {
+  img.curve-img1 {
+    position: absolute;
+    width: 790px;
+    top: 0;
+    left: 0;
+    height: 420px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -15px;
+    right: 162px;
+    width: auto;
+    position: absolute;
+  }
+  span.about-healz {
+    font-size: 370px;
+    position: absolute;
+    bottom: 260px;
+    left: 63%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -70px;
+    left: 36%;
+    width: auto;
+    position: absolute;
+  }
+  .banner-row {
+    margin: 0 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1500px) {
+  span.about-healz {
+    font-size: 370px;
+    position: absolute;
+    bottom: 260px;
+    left: 63%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -15px;
+    right: 162px;
+    width: auto;
+    position: absolute;
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -70px;
+    left: 36%;
+    width: auto;
+    position: absolute;
+  }
+  img.curve-img1 {
+    position: absolute;
+    width: 730px;
+    top: -30px;
+    left: -5px;
+    height: 300px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+  .banner-row {
+    margin: 0 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+  span.about-healz {
+    font-size: 340px;
+    position: absolute;
+    bottom: 260px;
+    left: 63%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -15px;
+    right: 162px;
+    width: auto;
+    position: absolute;
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -70px;
+    left: 36%;
+    width: auto;
+    position: absolute;
+  }
+  img.curve-img1 {
+    position: absolute;
+    width: 730px;
+    top: -30px;
+    left: -5px;
+    height: 300px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+  .banner-row {
+    margin: 0 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  section.header .col-lg-8.col-md-12.col-sm-12 {
+    width: 100%;
+    order: 3;
+  }
+
+  section.header .col-lg-2.col-md-6.col-sm-6 {
+    order: 2;
+    width: 50%;
+  }
+
+  .hdr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  span.about-healz {
+    font-size: 300px;
+    position: absolute;
+    bottom: 260px;
+    left: 56%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -15px;
+    right: 162px;
+    width: auto;
+    position: absolute;
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -70px;
+    left: 36%;
+    width: auto;
+    position: absolute;
+  }
+  .banner-row {
+    margin: 0 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  section.header .col-lg-8.col-md-12.col-sm-12 {
+    width: 100%;
+    order: 3;
+  }
+
+  section.header .col-lg-2.col-md-6.col-sm-6 {
+    order: 2;
+  }
+
+  .hdr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .banner-row {
+    margin: 0 0;
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -15px;
+    right: 162px;
+    width: auto;
+    position: absolute;
+  }
+  span.about-healz {
+    font-size: 220px;
+    position: absolute;
+    bottom: 309px;
+    left: 62%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -72px;
+    left: 30%;
+    width: auto;
+    position: absolute;
+  }
+  .banner-row {
+    margin: 0 0 0 30px;
+  }
+  img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -18%;
+    width: 100%;
+    height: 132%;
+    z-index: -1;
+    object-position: top;
+  }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  section.header .nav.stroke {
+    display: none;
+  }
+
+  .hdr_logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hdr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slicknav_nav a:hover {
+    background: #851112;
+    color: #fff;
+  }
+
+  .slicknav_nav a.active {
+    background: #851112;
+    color: #fff;
+  }
+
+  .gallery-image img {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .tatto-store-card {
+    position: absolute;
+    width: 50%;
+  }
+  .tatto-store-card1 {
+    position: absolute;
+    width: 50%;
+  }
+  .store-card2 {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    display: block;
+  }
+  .banner-box .banner-column {
+    margin: 40px 0px 50px 0px !important;
+  }
+  img.product-leaf1 {
+    position: absolute;
+    top: -56px;
+    right: 55px;
+  }
+  img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -14%;
+    width: 100%;
+    height: 132%;
+    z-index: -1;
+    object-position: top;
+  }
+  span.about-healz {
+    font-size: 143px;
+    position: absolute;
+    bottom: 200px;
+    left: 64%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.store-shape1 {
+    object-fit: scale-down;
+    top: -39px;
+    right: 0px;
+    width: auto;
+    position: absolute;
+  }
+  img.curve-img1 {
+    position: absolute;
+    width: 240px;
+    top: -30px;
+    left: -6px;
+    height: 300px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+  .banner_sec {
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1700px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .banner-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 100px 0 0;
+  }
+  .ftr-btm {
+    padding: 29px 50px;
+    border-top: 1px solid #ffffff69;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  .ftr-btm ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+    margin: 10px 0 10px 0;
+    gap: 14px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  section.header .nav.stroke {
+    display: none;
+  }
+
+  .hdr_logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hdr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slicknav_nav a:hover {
+    background: #851112;
+    color: #fff;
+  }
+
+  .slicknav_nav a.active {
+    background: #851112;
+    color: #fff;
+  }
+
+  .gallery-image img {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .banner-box .banner-column {
+    margin: 40px 0px 34px -120px;
+  }
+  .banner_sec {
+    height: auto;
+  }
+  img.product-leaf1 {
+    position: absolute;
+    top: -56px;
+    right: 55px;
+  }
+  img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -14%;
+    width: 100%;
+    height: 132%;
+    z-index: -1;
+    object-position: top;
+  }
+  span.about-healz {
+    font-size: 100px;
+    position: absolute;
+    bottom: 200px;
+    left: 65%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.store-shape1 {
+    object-fit: scale-down;
+    top: -25px;
+    right: -8px;
+    width: auto;
+    position: absolute;
+  }
+  .tatto-store-card {
+    position: absolute;
+    top: -90px;
+    left: 7px;
+    width: 97%;
+  }
+  .tatto-store-card1 {
+    position: absolute;
+    top: 80%;
+    right: 11px;
+    width: 95%;
+  }
+  .tatto-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 18px;
+    left: 0;
+  }
+  .tatto-sec .container {
+    padding: 180px 0 100px 0;
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -80px;
+    left: 18%;
+    width: auto;
+    position: absolute;
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -27px;
+    right: 4px;
+    width: auto;
+    position: absolute;
+    transform: rotate(327deg);
+  }
+  section.tatto-sec img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -14%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-position: top;
+  }
+  img.store-shape2 {
+    object-fit: scale-down;
+    bottom: -195px;
+    left: 168px;
+    width: auto;
+    position: absolute;
+    transform: rotate(271deg);
+  }
+
+  .quick-links > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 80px;
+    margin: 0 0 10px 0;
+  }
+  .footer-text {
+    width: 94%;
+    margin: 15px 0 30px auto;
+  }
+  .testimonial-sec img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -8%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-position: top;
+  }
+  .ftr-btm {
+    padding: 29px 50px;
+    border-top: 1px solid #ffffff69;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  .ftr-btm ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+    margin: 10px 0 10px 0;
+    gap: 14px;
+  }
+  img.product-leaf2 {
+    object-fit: scale-down;
+    width: auto;
+    position: absolute;
+    bottom: 183px;
+    left: 39px;
+    transform: rotate(24deg);
+  }
+  ul.hdr-right-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: #fcf9e8;
+    border-radius: 30px;
+    padding: 5px 4px;
+    width: fit-content;
+    gap: 8px;
+    justify-self: end;
+  }
+  ul.hdr-right-list button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #46865c;
+  }
+  ul.hdr-right-list a {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+    width: 34px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #46865c;
+  }
+  .banner-row {
+    margin: 0px 0px 0px 88px;
+  }
+  .banner-card2-text span {
+    font-family: "Funky";
+    color: #f7f6e5;
+    font-size: 86px;
+    display: block;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  img.banner-card2-img {
+    height: 500px;
+  }
+  .banner-box .banner-column {
+    margin: 40px 0px 40px 0px;
+  }
+  .banner-row {
+    margin: 0px 0px 0px 0px;
+  }
+  .banner-card2::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    content: "";
+    box-shadow: 0 0 20px #00000080;
+    background: #51c38d;
+    border-radius: 300px;
+  }
+  .ftr-btm ul li {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+  }
+  img.product-leaf1 {
+    position: absolute;
+    top: -53px;
+    right: 27px;
+  }
+  .gallery-row {
+    position: relative;
+    height: 1000px;
+    overflow: visible;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 299px) {
+  .hdr_logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hdr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slicknav_nav a:hover {
+    background: #851112;
+    color: #fff;
+  }
+
+  .slicknav_nav a.active {
+    background: #851112;
+    color: #fff;
+  }
+
+  .gallery-image img {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .banner-box .banner-column {
+    margin: 40px 0px 34px -120px;
+  }
+  .banner_sec {
+    height: auto;
+  }
+  img.product-leaf1 {
+    position: absolute;
+    top: -56px;
+    right: 55px;
+  }
+  img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -14%;
+    width: 100%;
+    height: 132%;
+    z-index: -1;
+    object-position: top;
+  }
+  span.about-healz {
+    font-size: 110px;
+    position: absolute;
+    bottom: 214px;
+    left: 40%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 1;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+  }
+  img.store-shape1 {
+    object-fit: scale-down;
+    top: -25px;
+    right: -8px;
+    width: auto;
+    position: absolute;
+  }
+  .tatto-store-card {
+    position: absolute;
+    top: -90px;
+    left: 7px;
+    width: 97%;
+  }
+  .tatto-store-card1 {
+    position: absolute;
+    top: 80%;
+    right: 11px;
+    width: 95%;
+  }
+  .tatto-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 18px;
+    left: 0;
+  }
+  .tatto-sec .container {
+    padding: 180px 0 100px 0;
+  }
+  img.tatto-shape2 {
+    object-fit: scale-down;
+    bottom: -80px;
+    left: 25%;
+    width: auto;
+    position: absolute;
+  }
+  img.tatto-shape1 {
+    object-fit: scale-down;
+    top: -27px;
+    right: 4px;
+    width: auto;
+    position: absolute;
+    transform: rotate(327deg);
+  }
+  section.tatto-sec img.background-bg {
+    left: 0;
+    position: absolute;
+    top: -14%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-position: top;
+  }
+  img.store-shape2 {
+    object-fit: scale-down;
+    bottom: -195px;
+    left: 168px;
+    width: auto;
+    position: absolute;
+    transform: rotate(271deg);
+  }
+
+  .quick-links > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 80px;
+    margin: 0 0 10px 0;
+  }
+  .footer-text {
+    width: 94%;
+    margin: 15px 0 30px auto;
+  }
+  .testimonial-sec img.background-bg {
+    left: 0;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-position: top;
+  }
+  .ftr-btm {
+    padding: 29px 50px;
+    border-top: 1px solid #ffffff69;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  .ftr-btm ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+    margin: 10px 0 10px 0;
+    gap: 14px;
+  }
+  img.product-leaf2 {
+    object-fit: scale-down;
+    width: auto;
+    position: absolute;
+    bottom: 183px;
+    left: 39px;
+    transform: rotate(24deg);
+  }
+  ul.hdr-right-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: #fcf9e8;
+    border-radius: 30px;
+    padding: 5px 4px;
+    width: fit-content;
+    gap: 8px;
+    justify-self: end;
+  }
+  ul.hdr-right-list button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #46865c;
+  }
+  ul.hdr-right-list a {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+    width: 34px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #46865c;
+  }
+  .banner-row {
+    margin: 0px 0px 0px 88px;
+  }
+  .banner-card2-text span {
+    font-family: "Funky";
+    color: #f7f6e5;
+    font-size: 86px;
+    display: block;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  img.banner-card2-img {
+    height: 500px;
+  }
+  .banner-box .banner-column {
+    margin: 40px 0px 40px 0px;
+  }
+  .banner-row {
+    margin: 0px 0px 0px 0px;
+  }
+  .banner-card2::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    content: "";
+    box-shadow: 0 0 20px #00000080;
+    background: #51c38d;
+    border-radius: 300px;
+  }
+  .ftr-btm ul li {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/*Media Query End*/
+
+html {
+  background-image: url("/images/footer-bg.jpg");
+  overflow-x: hidden;
+}
