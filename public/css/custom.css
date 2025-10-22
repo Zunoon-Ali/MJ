@@ -62,7 +62,6 @@ textarea {
     font-style: normal;
 }
 
-
 /***** Custom Classes *****/
 select {
     background: #fff url("../images/arrow.png") no-repeat right;
@@ -232,7 +231,6 @@ section.header .nav.stroke {
     width: 100%;
 }
 
-
 .nav.stroke ul li a:after {
     transition: 0.3s ease-in-out;
     position: absolute;
@@ -242,7 +240,7 @@ section.header .nav.stroke {
     width: 0%;
     content: ".";
     color: transparent;
-    background: #FDF9E8;
+    background: #fdf9e8;
     height: 2px;
     transform: translateX(-50%);
     z-index: -1;
@@ -309,7 +307,7 @@ section.header .nav.stroke {
 }
 
 .theme-btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
@@ -349,7 +347,6 @@ section.header .nav.stroke {
 
 /* Buttons Css End*/
 
-
 /* Loader start */
 #loader {
     position: fixed;
@@ -378,7 +375,6 @@ section.header .nav.stroke {
     display: flex;
     flex-direction: column;
 }
-
 
 #loader.hide {
     transform: translateY(-100%);
@@ -413,28 +409,29 @@ img.loader {
 
 /* Loader end */
 
-
 /* Custom Scrollbar  */
 #style-6::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 
 #style-6::-webkit-scrollbar {
     width: 10px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 
 #style-6::-webkit-scrollbar-thumb {
     background-color: #6bc86f;
-    background-image: -webkit-linear-gradient(45deg,
-            #fcf9e8c4 25%,
-            transparent 25%,
-            transparent 50%,
-            #fcf9e8c4 50%,
-            #fcf9e8c4 75%,
-            transparent 75%,
-            transparent)
+    background-image: -webkit-linear-gradient(
+        45deg,
+        #fcf9e8c4 25%,
+        transparent 25%,
+        transparent 50%,
+        #fcf9e8c4 50%,
+        #fcf9e8c4 75%,
+        transparent 75%,
+        transparent
+    );
 }
 
 .scrollbar {
@@ -446,12 +443,12 @@ img.loader {
 /* Home Page start*/
 
 /* Header */
-.hdr_logo a img {
+/* .hdr_logo a img {
     object-fit: scale-down;
     padding: 20px 0;
     display: block;
     width: fit-content;
-}
+} */
 
 ul#menu {
     justify-content: space-evenly;
@@ -498,7 +495,7 @@ ul.hdr-right-list button::before {
     left: 0;
     width: 100%;
     height: 0%;
-    content: '';
+    content: "";
     z-index: -1;
     background-color: #46865c;
     transition: 0.3s ease-in-out;
@@ -541,7 +538,7 @@ ul.hdr-right-list a::before {
     left: 0;
     width: 100%;
     height: 0%;
-    content: '';
+    content: "";
     z-index: -1;
     background-color: #46865c;
     transition: 0.3s ease-in-out;
@@ -609,7 +606,7 @@ ul.hdr-right-list button i {
     width: 220px;
     height: 220px;
     z-index: 0;
-    content: '';
+    content: "";
     border: 20px solid #fcf9e8;
     border-radius: 50%;
 }
@@ -717,7 +714,7 @@ img.flower-card {
     height: 100%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    content: '';
+    content: "";
     box-shadow: 0 0 20px #00000080;
     background: #51c38d;
     border-radius: 300px;
@@ -802,7 +799,8 @@ img.banner-card3-img {
 
 /*end */
 /* section start */
-section.about_sec {}
+section.about_sec {
+}
 
 .about-text {
     position: relative;
@@ -969,7 +967,8 @@ img.yellow-shape {
     width: 100px;
 }
 
-h6.black {}
+h6.black {
+}
 
 span.price h6.black {
     left: 0;
@@ -1008,7 +1007,6 @@ span.price h6.black {
     box-shadow: 0 0 20px 0 #0000006e;
     position: relative;
     z-index: 1;
-
 }
 
 .product-card::before {
@@ -1017,13 +1015,12 @@ span.price h6.black {
     left: 0;
     width: 100%;
     height: 0%;
-    content: '';
+    content: "";
     z-index: -1;
     border-radius: 400px;
     background-color: #46865c;
     transition: 0.3s ease-in-out;
 }
-
 
 .shine {
     position: relative;
@@ -1031,7 +1028,11 @@ span.price h6.black {
 }
 
 .shine::before {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
     content: "";
     display: block;
     height: 100%;
@@ -1058,7 +1059,6 @@ span.price h6.black {
     height: 100%;
     transition: 0.3s ease-in-out;
 }
-
 
 .product-heading p {
     color: #fff;
@@ -1106,7 +1106,7 @@ span.price h6.black {
     height: 100%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    content: '';
+    content: "";
     box-shadow: 0 0 20px #00000080;
     background: #51c38d;
     border-radius: 300px;
@@ -1264,7 +1264,6 @@ img.tatto-flower-img {
     margin: 20px 0;
 }
 
-
 .tatto-card-image {
     position: relative;
     width: fit-content;
@@ -1388,7 +1387,6 @@ section.gallery-sec img.background-bg {
     object-position: top;
 }
 
-
 .gallery-image img {
     height: 600px;
     border-radius: 400px;
@@ -1404,7 +1402,6 @@ section.gallery-sec img.background-bg {
 
 .gallery-column:hover {
     z-index: 9;
-
 }
 
 .gallery-column {
@@ -1441,10 +1438,6 @@ section.gallery-sec img.background-bg {
     /* adjust as needed */
     overflow: visible;
 }
-
-
-
-
 
 /* section end */
 
@@ -1488,7 +1481,7 @@ img.comma-img {
     width: 100%;
     height: 100%;
     z-index: -2;
-    content: '';
+    content: "";
     background: #81d1a6;
     border-radius: 20px;
     transform: rotate(-15deg);
@@ -1526,7 +1519,7 @@ img.comma-img {
     width: 100%;
     height: 100%;
     z-index: -1;
-    content: '';
+    content: "";
     background: #f9f6e5;
     border-radius: 20px;
     transition: 3s ease-in-out;
@@ -1539,7 +1532,7 @@ img.comma-img {
     width: 100%;
     height: 100%;
     z-index: -2;
-    content: '';
+    content: "";
     background: #81d1a6;
     border-radius: 20px;
     transform: rotate(15deg);
@@ -1559,13 +1552,9 @@ img.comma-img {
 
 /* section end */
 
-
 /* Footer */
 
-
-
 footer {
-
     background: #161616;
 
     padding: 47px 0 0px 0;
@@ -1575,10 +1564,7 @@ footer {
     background-image: url(../images/footer-bg.jpg);
 }
 
-
-
 footer p {
-
     font-size: 14px;
 
     width: 100%;
@@ -1592,10 +1578,7 @@ footer p {
     font-weight: 400;
 }
 
-
-
 footer h3 {
-
     font-weight: 200;
 
     color: #fff;
@@ -1613,24 +1596,18 @@ footer h3 {
     padding-top: 0;
 }
 
-
-
 .quick-links ul li {
-
     margin-bottom: 3px;
 }
 
-
-
 .quick-links ul li a {
-
     color: #ffff;
 
     text-transform: uppercase;
 
     font-weight: 400;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
 
     margin-bottom: 13px;
 
@@ -1647,8 +1624,7 @@ footer h3 {
     transition-duration: 0.2s;
 }
 
-.quick-links>div {
-
+.quick-links > div {
     display: flex;
 
     align-items: center;
@@ -1660,10 +1636,7 @@ footer h3 {
     margin: 0 0 60px 0;
 }
 
-
-
 ul.footer-list li a {
-
     font-size: 17px;
 
     color: #ffffffa6;
@@ -1671,13 +1644,9 @@ ul.footer-list li a {
     line-height: 40px;
 
     font-weight: 300;
-
 }
 
-
-
 ul.ftr-list li a {
-
     display: flex;
 
     align-items: center;
@@ -1695,10 +1664,7 @@ ul.ftr-list li a {
     margin-bottom: 10px;
 }
 
-
-
 ul.ftr-list li a p {
-
     line-height: 1;
 
     color: #fff;
@@ -1718,26 +1684,18 @@ ul.ftr-list li a img {
 }
 
 ul.ftr-list i {
-
     color: #606e76;
 
     font-size: 24px;
-
 }
 
-
-
 .footer-text {
-
     width: 94%;
 
     margin: 60px 0 0 auto;
 }
 
-
-
 .quick-links {
-
     width: 90%;
 
     margin: 60px 0 0 auto;
@@ -1745,21 +1703,15 @@ ul.ftr-list i {
     margin-bottom: 0;
 }
 
-
-
 .quick-links.ser-links {
-
     width: 90%;
 }
 
-
-
 footer .col-md-3:before,
 footer .col-md-2:before {
-
     position: absolute;
 
-    content: '';
+    content: "";
 
     background-color: #ffffff69;
 
@@ -1772,27 +1724,15 @@ footer .col-md-2:before {
     top: 0;
 }
 
-
-
 footer .col-md-4,
-
 footer .col-md-3,
-
 footer .col-md-2 {
-
     position: relative;
-
 }
-
-
 
 footer .col-md-3:last-child:before {
-
     display: none;
-
 }
-
-
 
 .ftr-btm {
     padding: 12px 50px;
@@ -1800,8 +1740,6 @@ footer .col-md-3:last-child:before {
     border-radius: 5px;
     background-color: transparent;
 }
-
-
 
 .ftr-btm ul {
     display: flex;
@@ -1846,7 +1784,6 @@ footer .col-md-3:last-child:before {
     align-items: center;
     justify-content: space-between;
     margin: 0;
-
 }
 
 .footer_bottom a {
@@ -1876,7 +1813,6 @@ footer .col-md-3:last-child:before {
 section.testimonial-sec {
     padding: 80px 0 50px 0;
 }
-
 
 .testi-main-box {
     position: relative;
@@ -1912,7 +1848,6 @@ section.testimonial-sec {
     100% {
         transform: translateY(0%);
     }
-
 }
 
 @keyframes second {
@@ -1923,7 +1858,6 @@ section.testimonial-sec {
     100% {
         transform: translateY(0%);
     }
-
 }
 
 .second.loader-column {
@@ -1964,7 +1898,6 @@ img.product-leaf2 {
 }
 
 /* Footer Ends */
-
 
 img.gallery-shape1-img {
     object-fit: scale-down;
@@ -2014,7 +1947,6 @@ img.store-shape2 {
     position: absolute;
 }
 
-
 .tatto-box {
     position: relative;
 }
@@ -2023,40 +1955,76 @@ img.store-shape2 {
 /* section end */
 
 /* Home Page end*/
-/* 
 
-@media (max-width: 540px) {
-    .tatto-stars {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 1rem;
-        padding-bottom: 1rem;
-    }
-    
-    .tatto-stars::-webkit-scrollbar {
-        display: none;  
-    }
-    
-    .tatto-stars .col-lg-3,
-    .tatto-stars .col-sm-3 {
-        flex: 0 0 100%;  
-        scroll-snap-align: start;
-    }
-    
-    .tatto-card {
-        margin: 0 auto;
-        width: 90%;
-    }
-    
-    .tatto-button {
-        flex: 0 0 100%;
-        text-align: center;
-        margin-top: 1rem;
-    }
-}
-.tatto-stars {
-    scroll-behavior: smooth;
+.product_banner {
+    background-image: url(../images/product-banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-*/
+.product_product-sec .background-bg {
+    left: 0;
+    position: absolute;
+    top: -17%;
+    width: 100%;
+    height: 132%;
+    z-index: -1;
+    object-position: top;
+}
+
+img.product-leaf2 {
+    object-fit: scale-down;
+    width: auto;
+    position: absolute;
+    bottom: 130px;
+    left: 10%;
+}
+
+/* .product_gallery-sec .background-bg{
+    left: 0;
+    position: absolute;
+    top: -25%;
+    width: 100%;
+    height: 197%;
+    z-index: -1;
+    object-position: top;
+} */
+
+footer {
+    background: #161616;
+    padding: 47px 0 0px 0;
+    overflow: hidden;
+    background-image: url(../images/footer-bg.jpg);
+    position: relative;
+    z-index: 11;
+}
+
+.gallery_product h2 {
+    color: #337a4e;
+}
+
+.product_gallery_row .gallery-shape2-img_product {
+    object-fit: scale-down;
+    bottom: 6%;
+    left: -1%;
+    width: auto;
+    position: absolute;
+    transform: rotate(268deg);
+}
+
+/* @media (min-width: 800px) and (max-width: 1400px){
+    body {
+        padding-top: 190px;
+    }
+} */
+
+.hdr_logo1 img {
+    object-fit: contain;
+    max-width: 55%;
+    width: 65%;
+}

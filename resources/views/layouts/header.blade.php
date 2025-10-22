@@ -122,13 +122,16 @@
   /* ===== Sticky Header ===== */
   .header.desktop,
   .header.mobile {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    /* Slight transparent layer */
     backdrop-filter: blur(8px);
   }
+
 
   /* ===== Desktop Header ===== */
   .header.desktop {
@@ -185,11 +188,16 @@
       transform: rotate(-45deg) translateY(-7px);
     }
 
-    /* Logo */
-    .hdr_logo2 img {
-      height: 200px;
+    .hdr_logo1 img {
+      height: 60px;
+      width: auto;
       display: block;
-      margin: 0 auto;
+    }
+
+    .hdr_logo2 img {
+      height: 130px;
+      width: auto;
+      display: block;
     }
 
     /* Right Buttons */
@@ -249,6 +257,18 @@
 
     .mobile-menu a:hover {
       color: #f9c74f;
+    }
+
+    ul.hdr-right-list {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      background: #fcf9e8;
+      border-radius: 30px;
+      padding: 7px 15px;
+      width: fit-content;
+      gap: 10px;
+      justify-self: end;
     }
   }
 

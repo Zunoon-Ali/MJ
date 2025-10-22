@@ -7,16 +7,16 @@ Route::get('/', function () {
 })->name('home');
 
 
-// Route::get('/about', function () {
-//     return view('about');
-// });
+Route::get('/about', function () {
+    return view('about');
+});
 
 
-// Route::get('/product', function () {
-//     return view('product');
-// });
+Route::get('/product', function () {
+    return view('product');
+});
 
 
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
+Route::get('/contact', function () {
+    return view('contact');
+});
