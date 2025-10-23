@@ -446,7 +446,7 @@
                      </div>
                  </div>
              </div>
-             <div class="col-lg-3 col-md-6 col-sm-12">
+             <!-- <div class="col-lg-3 col-md-6 col-sm-12">
                  <div class="product-card" data-aos="fade-up">
                      <div class="product-card-image">
                          <span class="price">
@@ -521,7 +521,7 @@
                          </a>
                      </div>
                  </div>
-             </div>
+             </div> -->
 
 
 
