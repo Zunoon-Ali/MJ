@@ -4,7 +4,7 @@
 
  @section('content')
 
- <!-- <div id="loader">
+ <div id="loader">
         <div class="loader-box">
             <div class="first loader-column">
                 <span>
@@ -198,7 +198,7 @@
                 <img src="images/banner-card2-img.png" alt="loader-img" class="loader-img">
             </div>
         </div>
-    </div> -->
+    </div>
 
  <!-- banner start -->
  <section id="contactSlider" class="contact_banner_sec carousel slide vertical" data-bs-ride="carousel">
