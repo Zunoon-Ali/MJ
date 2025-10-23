@@ -1,6 +1,6 @@
 <!-- about_sec start -->
-<section class="about_sec sec">
-    <span class="about-healz">Healz</span>
+<section class="about_sec sec" id="about_sec">
+    <span class="about-healz">Verdian Roots</span>
 
     <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />
 
@@ -23,9 +23,9 @@
                         there’s a CBD product that fits your lifestyle and helps you find your inner peace.
                     </p>
 
-                    <img src="{{ asset('images/about.jpg') }}" alt="about" class="about" data-aos="fade-up" />
+                    <img src="{{ asset('images/about-slider1.png') }}" alt="about" class="about" data-aos="fade-up" />
 
-                    <a href="#" class="theme-btn" data-aos="fade-up">
+                    <a href="{{ url('/about') }}" class="theme-btn" data-aos="fade-up">
                         More Detail
                         <span class="leaf-icon">
                             <i class="fa-solid fa-leaf"></i>

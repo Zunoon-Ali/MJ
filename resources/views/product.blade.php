@@ -261,12 +261,26 @@
      <img src="{{ asset('images/product-bg.png') }}" alt="about-bg" class="background-bg" />
 
      <div class="container">
-         <div class="row">
-             <div class="col-lg-12">
+         <div class="row ">
+             <div class="col-lg-12" style="margin-bottom: 30px;">
                  <div class="product-heading text-center">
                      <img src="{{ asset('images/product-leaf.png') }}" alt="product-leaf" class="product-leaf1">
                      <p>Life And Leaf Healz Lifestyle</p>
                      <h2>Healthy living with Leaf Healzs</h2>
+                 </div>
+             </div>
+             <!-- ✅ Filter Dropdown (Top Left) -->
+             <div class="row mb-4">
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="product-filter">
+                         <label for="filter" class="form-label fw-bold me-2 col-3">Sort by:</label>
+                         <select id="filter" class="form-select">
+                             <option value="recent">Most Recent</option>
+                             <option value="low">Low Price</option>
+                             <option value="high">High Price</option>
+                             <option value="popular">Most Popular</option>
+                         </select>
+                     </div>
                  </div>
              </div>
 
@@ -279,7 +293,7 @@
                              <h6 class="black">250 <br> mg</h6>
                          </span>
                          <a href="{{ url('product-detail') }}">
-                             <img src="{{ asset('images/product1.png') }}" alt="product-img" class="product-img">
+                             <img src="{{ asset('images/product9.png') }}" alt="product-img" class="product-img">
                          </a>
                      </div>
                      <div class="product-card-text">
@@ -523,82 +537,82 @@
  <!-- section gallery-sec start -->
  <!-- gallery_sec start -->
  <!-- gallery_sec start -->
-    <section class="gallery-sec sec">
-        <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="gallery-heading text-center gallery_product">
-                        <h2>
-                            Our Gallery
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-row product_gallery_row">
-                <img src="{{ asset('images/lines.png') }}" alt="lines-img" class="lines-img">
-                <img src="{{ asset('images/green-line.png') }}" alt="gallery-shape1-img_product" class="gallery-shape1-img">
-                <img src="{{ asset('images/green-line1.png') }}" alt="gallery-shape2-img" class="gallery-shape2-img_product">
+ <section class="gallery-sec sec">
+     <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="gallery-heading text-center gallery_product">
+                     <h2>
+                         Our Gallery
+                     </h2>
+                 </div>
+             </div>
+         </div>
+         <div class="gallery-row product_gallery_row">
+             <img src="{{ asset('images/lines.png') }}" alt="lines-img" class="lines-img">
+             <img src="{{ asset('images/green-line.png') }}" alt="gallery-shape1-img_product" class="gallery-shape1-img">
+             <img src="{{ asset('images/green-line1.png') }}" alt="gallery-shape2-img" class="gallery-shape2-img_product">
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery1.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery1.jpg') }}" class="gallery1" alt="gallery1" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/about_tatto.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/about_tatto.png') }}" class="gallery1" alt="gallery1" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery2.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery2.jpg') }}" class="gallery2" alt="gallery2" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/about_testi2.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/about_testi2.png') }}" class="gallery2" alt="gallery2" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery3.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery3.jpg') }}" class="gallery3" alt="gallery3" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/contact-slider1.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/contact-slider1.png') }}" class="gallery3" alt="gallery3" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery4.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery4.jpg') }}" class="gallery4" alt="gallery4" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/contact-slider2.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/contact-slider2.png') }}" class="gallery4" alt="gallery4" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery5.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery5.jpg') }}" class="gallery5" alt="gallery5" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/home-box-3.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/home-box-3.png') }}" class="gallery5" alt="gallery5" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery6.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery6.jpg') }}" class="gallery6" alt="gallery6" />
-                        </a>
-                    </div>
-                </div>
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/product-banner.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/product-banner.png') }}" class="gallery6" alt="gallery6" />
+                     </a>
+                 </div>
+             </div>
 
-                <div class="gallery-column">
-                    <div class="gallery-image">
-                        <a href="{{ asset('images/gallery7.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery7.jpg') }}" class="gallery7" alt="gallery7" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- gallery_sec end -->
+             <div class="gallery-column">
+                 <div class="gallery-image">
+                     <a href="{{ asset('images/contact-slider3.png') }}" data-fancybox="gallery">
+                         <img src="{{ asset('images/contact-slider3.png') }}" class="gallery7" alt="gallery7" />
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ <!-- gallery_sec end -->
  <!-- gallery_sec end -->
  <!-- section gallery-sec end  -->
 

@@ -9,6 +9,7 @@ body {
     color: #000;
     overflow-x: hidden;
     font-family: "Montserrat", serif;
+    overflow-y: hidden;
 }
 
 a {
@@ -2027,4 +2028,246 @@ footer {
     object-fit: contain;
     max-width: 55%;
     width: 65%;
+}
+
+.product-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-filter .form-select {
+    border-radius: 30px;
+    padding: 6px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+
+.product-filter label {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.about_banner_sec {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: url(../images/about-slider1.png);
+}
+.slide2 {
+    background: url(../images/about-slider2.png) no-repeat center bottom / cover;
+    position: relative;
+}
+
+.slide2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.27); /* same as #00000044 */
+    backdrop-filter: blur(4px); /* use backdrop-filter for a soft blur */
+    z-index: 1;
+}
+
+/* Make sure your content is above the overlay */
+.slide2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.slide3 {
+    background-image: url(../images/product-banner.png);
+}
+
+.about_blur_box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.tagline {
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #f9c74f;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .about_blur_box {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.slide2 p {
+    color: #ffffff;
+}
+.slide1 p {
+    color: white;
+}
+
+.about_about-helz {
+    font-size: 10rem;
+    position: absolute;
+    bottom: 300px;
+    left: 72%;
+    color: #ebe0a1;
+    width: 100%;
+    z-index: 0;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+}
+
+.contact_cf-helz{
+font-size: 10rem;
+    position: absolute;
+    bottom: 300px;
+    left: 72%;
+    color: #336a4e2e;
+    width: 100%;
+    z-index: 0;
+    font-family: "Funky";
+    white-space: nowrap;
+    transform: translateX(-70%);
+    text-shadow: 17px 15px 10px #337a4e;
+}
+
+
+.contact_banner_sec {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_slide1 {
+  background: url('../images/contact-slider1.png') no-repeat center/cover;
+}
+
+.contact_slide2 {
+  background: url('../images/contact-slider2.png') no-repeat center/cover;
+}
+
+.contact_slide3 {
+  background: url('../images/contact-slider3.png') no-repeat center/cover;
+}
+
+.contact_blur_box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.contact_tagline {
+  font-weight: 600;
+  color: #a4e96b;
+}
+
+
+/* Container & layout adjustments */
+.contact_cf-container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact_cf-form-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_cf-form-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Inputs */
+.contact_cf-input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.contact_cf-input::placeholder {
+  color: #eee;
+}
+
+.contact_cf-input:focus {
+  box-shadow: 0 0 10px rgba(164, 233, 107, 0.5);
+  outline: none;
+}
+
+/* Text styles */
+.contact_cf-text h2 {
+  color:#337a4e;
+  font-weight: 600;
+}
+
+.contact_cf-p ,.contact_cf-tagline{
+  color: #337a4e;
+}
+
+.contact_cf-theme-btn {
+  background-color: #a4e96b;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact_cf-theme-btn:hover {
+  background-color: #8ed959;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact_cf-row {
+    text-align: center;
+  }
+  .contact_cf-form-box {
+    margin-top: 30px;
+  }
+}
+
+
+img.green-line.contact_cf-green-line {
+  object-fit: scale-down;
+  width: auto;
+  position: absolute;
+  top: -10%;
+  right: -3%;
+}
+
+img.green-line1.contact_cf-green-line1 {
+  object-fit: scale-down;
+  width: auto;
+  position: absolute;
+  bottom: 75%;
+  left: -4%;
+}
+
+.contact_cf-form .form-label{
+    color:#337a4e;
 }

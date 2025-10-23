@@ -1,4 +1,3 @@
-<!-- ===================== HEADER START ===================== -->
 <section class="header desktop">
   <div class="container-fluid">
     <div class="row align-items-center justify-content-between row1">
