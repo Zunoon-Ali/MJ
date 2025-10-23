@@ -18,56 +18,56 @@
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery1.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery1.jpg') }}" class="gallery1" alt="gallery1" />
+                        <a href="{{ asset('images/about_tatto.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/about_tatto.png') }}" class="gallery1" alt="gallery1" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery2.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery2.jpg') }}" class="gallery2" alt="gallery2" />
+                        <a href="{{ asset('images/about_testi2.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/about_testi2.png') }}" class="gallery2" alt="gallery2" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery3.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery3.jpg') }}" class="gallery3" alt="gallery3" />
+                        <a href="{{ asset('images/contact-slider1.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/contact-slider1.png') }}" class="gallery3" alt="gallery3" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery4.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery4.jpg') }}" class="gallery4" alt="gallery4" />
+                        <a href="{{ asset('images/contact-slider2.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/contact-slider2.png') }}" class="gallery4" alt="gallery4" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery5.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery5.jpg') }}" class="gallery5" alt="gallery5" />
+                        <a href="{{ asset('images/home-box-3.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/home-box-3.png') }}" class="gallery5" alt="gallery5" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery6.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery6.jpg') }}" class="gallery6" alt="gallery6" />
+                        <a href="{{ asset('images/product-banner.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/product-banner.png') }}" class="gallery6" alt="gallery6" />
                         </a>
                     </div>
                 </div>
 
                 <div class="gallery-column">
                     <div class="gallery-image">
-                        <a href="{{ asset('images/gallery7.jpg') }}" data-fancybox="gallery">
-                            <img src="{{ asset('images/gallery7.jpg') }}" class="gallery7" alt="gallery7" />
+                        <a href="{{ asset('images/contact-slider3.png') }}" data-fancybox="gallery">
+                            <img src="{{ asset('images/contact-slider3.png') }}" class="gallery7" alt="gallery7" />
                         </a>
                     </div>
                 </div>

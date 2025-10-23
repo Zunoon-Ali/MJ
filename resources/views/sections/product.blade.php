@@ -21,7 +21,7 @@
                             <h6 class="black">250 <br> mg</h6>
                         </span>
                         <a href="{{ url('product-detail') }}">
-                            <img src="{{ asset('images/product1.png') }}" alt="product-img" class="product-img">
+                            <img src="{{ asset('images/product8.png') }}" alt="product-img" class="product-img">
                         </a>
                     </div>
                     <div class="product-card-text">
@@ -84,7 +84,7 @@
                             <h6 class="black">250 <br> mg</h6>
                         </span>
                         <a href="{{ url('product-detail') }}">
-                            <img src="{{ asset('images/product4.png') }}" alt="product-img" class="product-img">
+                            <img src="{{ asset('images/product9.png') }}" alt="product-img" class="product-img">
                         </a>
                     </div>
                     <div class="product-card-text">
