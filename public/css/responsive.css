@@ -130,6 +130,11 @@
         margin-top: 50px;
         height: fit-content;
     }
+        #loader span {
+        font-size: 80px;
+        line-height: 1.7;
+        margin-bottom: 5px;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1365px) {
@@ -811,6 +816,9 @@
     cursor: pointer;
     border-radius: 16px;
 }
+ #loader span {
+        font-size: 28px;
+    }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 299px) {

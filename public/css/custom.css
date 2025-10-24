@@ -368,7 +368,7 @@ section.header .nav.stroke {
 #loader span {
     font-family: "Funky";
     color: #f7f6e5;
-    font-size: 113px;
+   font-size: clamp(24px, 6vw, 70px);
     display: block;
     line-height: 1;
     letter-spacing: 0;
@@ -2648,3 +2648,5 @@ section.cart-page.sec.py-5.bg-light {
             }
 
         }
+
+
