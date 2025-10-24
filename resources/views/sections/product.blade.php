@@ -26,7 +26,7 @@
                     </div>
                     <div class="product-card-text">
                         <h6>Products Name Here</h6>
-                        <a href="#" class="theme-btn">$39.99
+                        <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                         </a>
                     </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="product-card-text">
                         <h6>Products Name Here</h6>
-                        <a href="#" class="theme-btn">$39.99
+                        <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                         </a>
                     </div>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="product-card-text">
                         <h6>Products Name Here</h6>
-                        <a href="#" class="theme-btn">$39.99
+                        <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                         </a>
                     </div>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="product-card-text">
                         <h6>Products Name Here</h6>
-                        <a href="#" class="theme-btn">$39.99
+                        <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                         </a>
                     </div>

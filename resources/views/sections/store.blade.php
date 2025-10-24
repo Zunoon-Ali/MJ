@@ -33,7 +33,7 @@
                     <div class="store-card2 store-card1" data-aos="fade-up">
                         <div class="store-card2-image shine">
                             <a href="#">
-                                <img src="{{ asset('images/product_about.png') }}" alt="store-card2-img" class="store-card2-img">
+                                <img src="{{ asset('images/product10.png') }}" alt="store-card2-img" class="store-card2-img">
                             </a>
                         </div>
                         <div class="store-card2-text">
@@ -49,7 +49,7 @@
                     <div class="store-card2 store-card3" data-aos="fade-up">
                         <div class="store-card2-image shine">
                             <a href="#">
-                                <img src="{{ asset('images/product-banner.png') }}" alt="store-card2-img" class="store-card2-img">
+                                <img src="{{ asset('images/product3.png') }}" alt="store-card2-img" class="store-card2-img">
                             </a>
                         </div>
                         <div class="store-card2-text">

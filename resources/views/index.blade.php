@@ -8,194 +8,194 @@
     <div class="loader-box">
         <div class="first loader-column">
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                HERBS
             </span>
             <span>
-                Leaf
+                CARE
             </span>
             <span>
-                Leaf
+                GROW
             </span>
             <span>
-                Leaf
+                PURE
             </span>
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                SHINE
             </span>
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                HERBS
             </span>
             <span>
-                Leaf
+                CARE
             </span>
             <span>
-                Leaf
+                GROW
             </span>
             <span>
-                Leaf
+                PURE
             </span>
         </div>
         <div class="second loader-column">
             <span>
-                Healz
+                HERBS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                PURE
             </span>
             <span>
-                Healz
+                CARE
             </span>
             <span>
-                Healz
+                GROW
             </span>
             <span>
-                Healz
+                SHINE
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                HERBS
             </span>
             <span>
-                Healz
+                PURE
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                CARE
             </span>
             <span>
-                Healz
+                GROW
             </span>
         </div>
         <div class="first loader-column">
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                HERBS
             </span>
             <span>
-                Leaf
+                CARE
             </span>
             <span>
-                Leaf
+                GROW
             </span>
             <span>
-                Leaf
+                PURE
             </span>
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                SHINE
             </span>
             <span>
-                Leaf
+                ROOTS
             </span>
             <span>
-                Leaf
+                WASH
             </span>
             <span>
-                Leaf
+                HERBS
             </span>
             <span>
-                Leaf
+                CARE
             </span>
             <span>
-                Leaf
+                GROW
             </span>
             <span>
-                Leaf
+                PURE
             </span>
         </div>
         <div class="second loader-column">
             <span>
-                Healz
+                HERBS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                PURE
             </span>
             <span>
-                Healz
+                CARE
             </span>
             <span>
-                Healz
+                GROW
             </span>
             <span>
-                Healz
+                SHINE
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                HERBS
             </span>
             <span>
-                Healz
+                PURE
             </span>
             <span>
-                Healz
+                ROOTS
             </span>
             <span>
-                Healz
+                WASH
             </span>
             <span>
-                Healz
+                CARE
             </span>
             <span>
-                Healz
+                GROW
             </span>
         </div>
         <div class="loader-image">
-            <img src="images/banner-card2-img.png" alt="loader-img" class="loader-img">
+            <img src="{{ url('images/product9.png') }}" alt="Root Herb Care" class="loader-img">
         </div>
     </div>
 </div>

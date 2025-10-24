@@ -4,201 +4,201 @@
 
  @section('content')
 
- <div id="loader">
-        <div class="loader-box">
-            <div class="first loader-column">
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-            </div>
-            <div class="second loader-column">
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-            </div>
-            <div class="first loader-column">
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-            </div>
-            <div class="second loader-column">
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-            </div>
-            <div class="loader-image">
-                <img src="images/banner-card2-img.png" alt="loader-img" class="loader-img">
-            </div>
+<div id="loader">
+    <div class="loader-box">
+        <div class="first loader-column">
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+        </div>
+        <div class="second loader-column">
+            <span>
+                HERBS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+        </div>
+        <div class="first loader-column">
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+        </div>
+        <div class="second loader-column">
+            <span>
+                HERBS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+        </div>
+        <div class="loader-image">
+            <img src="{{ url('images/product2.png') }}" alt="Root Herb Care" class="loader-img">
         </div>
     </div>
+</div>
 
 
  <!-- banner start -->
@@ -210,10 +210,10 @@
              <div class="container">
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
-                         <div class="about_blur_box p-4">
-                             <p class="tagline mb-2">Our Mission</p>
-                             <h2 class="mb-3">Healthy Living with Leaf Healzs</h2>
-                             <p>
+                         <div class="about_blur_box p-4 text-white">
+                             <p class="tagline mb-2 text-white">Our Mission</p>
+                             <h2 class="mb-3 text-white">Healthy Living with Leaf Healzs</h2>
+                             <p class="text-white">
                                  Discover a lifestyle inspired by nature’s healing. Embrace wellness with organic products that refresh your body and soul.
                              </p>
                          </div>
@@ -227,9 +227,9 @@
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
                          <div class="about_blur_box p-4">
-                             <p class="tagline mb-2">Natural Wellness</p>
-                             <h2 class="mb-3">Nature’s Touch for Everyday Health</h2>
-                             <p>
+                             <p class="tagline mb-2 text-white">Natural Wellness</p>
+                             <h2 class="mb-3 text-white">Nature’s Touch for Everyday Health</h2>
+                             <p class="text-white">
                                  Experience organic care that rejuvenates your body and brings peace to your lifestyle.
                              </p>
                          </div>
@@ -242,10 +242,10 @@
              <div class="container">
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
-                         <div class="about_blur_box p-4">
-                             <p class="tagline mb-2">Eco-Friendly</p>
-                             <h2 class="mb-3">Sustainable Choices for a Better Tomorrow</h2>
-                             <p>
+                         <div class="about_blur_box p-4 text-white">
+                             <p class="tagline mb-2 text-white">Eco-Friendly</p>
+                             <h2 class="mb-3 text-white">Sustainable Choices for a Better Tomorrow</h2>
+                             <p class="text-white">
                                  Join us in making a difference through natural, sustainable, and healthy living.
                              </p>
                          </div>
@@ -307,7 +307,7 @@
                  </div>
              </div>
              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 about_about-col-img">
-                 <img src="{{ asset('images/about.jpg') }}" alt="about" class="about about_about-about-jpg" data-aos="fade-up" />
+                 <img src="{{ asset('images/product-banner.png') }}" alt="about" class="about about_about-about-jpg" data-aos="fade-up" />
 
              </div>
          </div>

@@ -28,21 +28,30 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </li>
-            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <!-- ✅ Account Page -->
+            <li>
+              <a href="{{ route('account') }}">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <!-- ✅ Cart Page -->
+            <li>
+              <a href="{{ route('cart') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- ===================== HEADER END ===================== -->
 
-<!-- ===================== MOBILE HEADER START ===================== -->
+<!-- ===================== MOBILE HEADER ===================== -->
 <section class="header mobile">
   <div class="container">
     <div class="mobile-header">
-      <!-- Hamburger (Left) -->
+      <!-- Hamburger -->
       <div class="hamburger">
         <div class="ham-icon">
           <span></span>
@@ -51,14 +60,14 @@
         </div>
       </div>
 
-      <!-- Logo (Center) -->
+      <!-- Logo -->
       <div class="hdr_logo hdr_logo2">
         <a href="{{ url('/') }}">
           <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo" />
         </a>
       </div>
 
-      <!-- Right Buttons -->
+      <!-- ✅ Updated Right Buttons -->
       <div class="hdr-right-btn hdr-right-btn2">
         <ul class="hdr-right-list">
           <li>
@@ -66,8 +75,16 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </li>
-          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li>
+            <a href="{{ route('account') }}">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('cart') }}">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

@@ -4,208 +4,207 @@
 
  @section('content')
 
- <div id="loader">
-        <div class="loader-box">
-            <div class="first loader-column">
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-            </div>
-            <div class="second loader-column">
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-            </div>
-            <div class="first loader-column">
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-                <span>
-                    Leaf
-                </span>
-            </div>
-            <div class="second loader-column">
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-                <span>
-                    Healz
-                </span>
-            </div>
-            <div class="loader-image">
-                <img src="images/banner-card2-img.png" alt="loader-img" class="loader-img">
-            </div>
+
+<div id="loader">
+    <div class="loader-box">
+        <div class="first loader-column">
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+        </div>
+        <div class="second loader-column">
+            <span>
+                HERBS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+        </div>
+        <div class="first loader-column">
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                PURE
+            </span>
+        </div>
+        <div class="second loader-column">
+            <span>
+                HERBS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+            <span>
+                SHINE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                HERBS
+            </span>
+            <span>
+                PURE
+            </span>
+            <span>
+                ROOTS
+            </span>
+            <span>
+                WASH
+            </span>
+            <span>
+                CARE
+            </span>
+            <span>
+                GROW
+            </span>
+        </div>
+        <div class="loader-image">
+            <img src="{{ url('images/product-loader.png') }}" alt="Root Herb Care" class="loader-img">
         </div>
     </div>
+</div>
 
 
  <!-- banner start -->
  <!-- banner start -->
  <section class="product_banner">
-
-
  </section>
  <!-- banner end -->
 
@@ -298,7 +297,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -319,7 +318,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -340,7 +339,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -361,7 +360,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -382,7 +381,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -402,7 +401,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -421,7 +420,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -440,7 +439,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
+                         <a href="{{ url('product-detail') }}" class="theme-btn">$39.99
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>

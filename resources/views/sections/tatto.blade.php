@@ -6,7 +6,7 @@
     <div class="store-card2 tatto-store-card" data-aos="fade-up">
         <div class="store-card2-image shine">
             <a href="#">
-                <img src="{{ asset('images/about-slider2.png') }}" alt="store-card2-img" class="store-card2-img">
+                <img src="{{ asset('images/product4.png') }}" alt="store-card2-img" class="store-card2-img">
             </a>
         </div>
         <div class="store-card2-text">
@@ -104,7 +104,7 @@
     <div class="store-card2 tatto-store-card1" data-aos="fade-up">
         <div class="store-card2-image shine">
             <a href="#">
-                <img src="{{ asset('images/about-slider1.png') }}" alt="store-card2-img" class="store-card2-img">
+                <img src="{{ asset('images/product9.png') }}" alt="store-card2-img" class="store-card2-img">
             </a>
         </div>
         <div class="store-card2-text">

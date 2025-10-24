@@ -2064,6 +2064,7 @@ footer {
 .slide1 {
     background-image: url(../images/about-slider1.png);
 }
+
 .slide2 {
     background: url(../images/about-slider2.png) no-repeat center bottom / cover;
     position: relative;
@@ -2076,8 +2077,10 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.27); /* same as #00000044 */
-    backdrop-filter: blur(4px); /* use backdrop-filter for a soft blur */
+    background-color: rgba(0, 0, 0, 0.27);
+    /* same as #00000044 */
+    backdrop-filter: blur(4px);
+    /* use backdrop-filter for a soft blur */
     z-index: 1;
 }
 
@@ -2120,6 +2123,7 @@ footer {
 .slide2 p {
     color: #ffffff;
 }
+
 .slide1 p {
     color: white;
 }
@@ -2137,8 +2141,8 @@ footer {
     transform: translateX(-70%);
 }
 
-.contact_cf-helz{
-font-size: 10rem;
+.contact_cf-helz {
+    font-size: 10rem;
     position: absolute;
     bottom: 300px;
     left: 72%;
@@ -2151,123 +2155,496 @@ font-size: 10rem;
     text-shadow: 17px 15px 10px #337a4e;
 }
 
-
 .contact_banner_sec {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact_slide1 {
-  background: url('../images/contact-slider1.png') no-repeat center/cover;
+    background: url("../images/contact-slider1.png") no-repeat center/cover;
 }
 
 .contact_slide2 {
-  background: url('../images/contact-slider2.png') no-repeat center/cover;
+    background: url("../images/contact-slider2.png") no-repeat center/cover;
 }
 
 .contact_slide3 {
-  background: url('../images/contact-slider3.png') no-repeat center/cover;
+    background: url("../images/contact-slider3.png") no-repeat center/cover;
 }
 
 .contact_blur_box {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    color: #fff;
 }
 
 .contact_tagline {
-  font-weight: 600;
-  color: #a4e96b;
+    font-weight: 600;
+    color: #a4e96b;
 }
-
 
 /* Container & layout adjustments */
 .contact_cf-container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .contact_cf-form-box {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact_cf-form-box:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 /* Inputs */
 .contact_cf-input {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #fff;
-  border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
 }
 
 .contact_cf-input::placeholder {
-  color: #eee;
+    color: #eee;
 }
 
 .contact_cf-input:focus {
-  box-shadow: 0 0 10px rgba(164, 233, 107, 0.5);
-  outline: none;
+    box-shadow: 0 0 10px rgba(164, 233, 107, 0.5);
+    outline: none;
 }
 
 /* Text styles */
 .contact_cf-text h2 {
-  color:#337a4e;
-  font-weight: 600;
+    color: #337a4e;
+    font-weight: 600;
 }
 
-.contact_cf-p ,.contact_cf-tagline{
-  color: #337a4e;
+.contact_cf-p,
+.contact_cf-tagline {
+    color: #337a4e;
 }
 
 .contact_cf-theme-btn {
-  background-color: #a4e96b;
-  color: #000;
-  border-radius: 50px;
-  padding: 10px 30px;
-  font-weight: 600;
-  transition: 0.3s;
+    background-color: #a4e96b;
+    color: #000;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .contact_cf-theme-btn:hover {
-  background-color: #8ed959;
-  color: #111;
+    background-color: #8ed959;
+    color: #111;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .contact_cf-row {
-    text-align: center;
-  }
-  .contact_cf-form-box {
-    margin-top: 30px;
-  }
+    .contact_cf-row {
+        text-align: center;
+    }
+
+    .contact_cf-form-box {
+        margin-top: 30px;
+    }
 }
 
-
 img.green-line.contact_cf-green-line {
-  object-fit: scale-down;
-  width: auto;
-  position: absolute;
-  top: -10%;
-  right: -3%;
+    object-fit: scale-down;
+    width: auto;
+    position: absolute;
+    top: -10%;
+    right: -3%;
 }
 
 img.green-line1.contact_cf-green-line1 {
-  object-fit: scale-down;
-  width: auto;
-  position: absolute;
-  bottom: 75%;
-  left: -4%;
+    object-fit: scale-down;
+    width: auto;
+    position: absolute;
+    bottom: 75%;
+    left: -4%;
 }
 
-.contact_cf-form .form-label{
-    color:#337a4e;
+.contact_cf-form .form-label {
+    color: #337a4e;
 }
+
+section.product-detail.sec {
+    padding: 180px 0 200px 0;
+}
+
+/* ==== Product Detail Page ==== */
+
+/* ==== Product Info / Review Section ==== */
+.product-info {
+    background-color: #fff;
+    padding: 80px 0;
+    position: relative;
+}
+
+.product-info .nav-tabs {
+    border: none;
+}
+
+.product-info .nav-link {
+    color: #3d6b46;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+    background: transparent;
+    transition: all 0.3s ease;
+    font-size: 25px;
+}
+
+.product-info .nav-link.active {
+    border-bottom: 2px solid #4a7c59;
+    color: #4a7c59;
+}
+
+.product-info-content {
+    text-align: left;
+}
+
+.product-info-content h5 {
+    color: #2e4a3b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.product-info-content ul.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-info-content ul.info-list li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 15px;
+}
+
+.reviews-section .review-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.reviews-section .review-item h6 {
+    color: #2e4a3b;
+    font-weight: 600;
+}
+
+.reviews-section .rating {
+    font-size: 18px;
+}
+
+.review-form h5 {
+    color: #2e4a3b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.product-detail {
+    position: relative;
+    padding: 100px 0;
+    background-color: #f9f9f5;
+}
+
+.product-detail .container {
+    position: relative;
+    z-index: 2;
+}
+
+.product-detail img {
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-detail img:hover {
+    transform: scale(1.05);
+}
+
+.product-detail h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #2e4a3b;
+}
+
+.product-detail p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.product-detail h4 {
+    color: #3d6b46;
+    font-weight: 700;
+}
+
+.product-detail form label {
+    font-weight: 500;
+    color: #2e4a3b;
+}
+
+.product-detail input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #4a7c59;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.theme-btn:hover {
+    background-color: #3c6649;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.theme-btn.alt-btn {
+    background-color: #c5a654;
+}
+
+.theme-btn.alt-btn:hover {
+    background-color: #b38f3b;
+}
+
+.theme-btn .leaf-icon {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* Restore number input arrows in Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+    appearance: auto;
+    -webkit-appearance: auto;
+    margin: 0;
+}
+
+/* Optional: style the number input to match your theme */
+input[type="number"] {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* ==== Responsive ==== */
+
+@media (max-width: 768px) {
+    .product-detail {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .product-detail img {
+        margin-bottom: 30px;
+    }
+}
+
+.cart-page .card {
+    border-radius: 16px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+    border-radius: 50%;
+}
+
+.quantity-btn:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.cart-page h2 {
+    color: #2b463c;
+    letter-spacing: 0.5px;
+}
+
+.card-body img {
+    width: 80px;
+}
+
+input.form-control.form-control-sm.text-center.mx-2 {
+    margin: 0;
+}
+section.cart-page.sec.py-5.bg-light {
+    padding: 200px 0 !important;
+}
+.checkout-page .card {
+    border-radius: 16px;
+}
+
+.checkout-page h2 {
+    color: #2b463c;
+    letter-spacing: 0.5px;
+}
+
+.checkout-page label {
+    font-weight: 600;
+    color: #2b463c;
+}
+
+.checkout-page input,
+.checkout-page select {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.checkout-page input:focus,
+.checkout-page select:focus {
+    border-color: #28a745;
+    box-shadow: none;
+}
+
+.account-page .list-group-item {
+    border: none;
+    padding: 12px 18px;
+    font-weight: 500;
+}
+
+.account-page .list-group-item.active {
+    background-color: #2b463c;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.account-page .card {
+    border-radius: 16px;
+}
+
+.account-page label {
+    font-weight: 600;
+    color: #2b463c;
+}
+
+.banner_sec .theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #8ee1a7;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.product-card-text a {
+    color: #e3efe7;
+    font-family: "Funky";
+    font-size: 20px;
+}
+.banner-box .row {
+    padding-top: 54px;
+}
+
+    /* Make tables scroll horizontally on smaller screens */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Custom Scrollbar for better UX on desktop/tablets */
+        .table-responsive::-webkit-scrollbar {
+            height: 8px;
+        }
+        .table-responsive::-webkit-scrollbar-thumb {
+            background: #377f52; /* Green color */
+            border-radius: 4px;
+        }
+        .table-responsive::-webkit-scrollbar-thumb:hover {
+            background: #2a6140;
+        }
+
+        /* Ensure Product details don't wrap in their cell */
+        .product-details-container {
+            min-width: 250px;
+        }
+
+        /* Mobile Table Transformation (Stacking Rows) */
+        @media (max-width: 768px) {
+            /* Ensures the main table (col-lg-8) becomes a vertically stacked list of cards */
+            .card-body.table-responsive .table {
+                /* Reset standard table behavior on mobile to allow the flex transformation */
+                display: block;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .card-body.table-responsive thead {
+                /* Hide the standard table header on mobile */
+                display: none;
+            }
+
+            .card-body.table-responsive tr {
+                /* Turn rows into blocks (like cards) */
+                display: block;
+                margin-bottom: 1rem;
+                border: 1px solid #dee2e6;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .card-body.table-responsive td {
+                /* Make each cell a flex row */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: right;
+                border: none;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .card-body.table-responsive td:last-child {
+                border-bottom: none;
+            }
+
+            .card-body.table-responsive td::before {
+                /* Use data-label to show the column header */
+                content: attr(data-label);
+                font-weight: 600;
+                text-transform: capitalize;
+                text-align: left;
+                flex-grow: 1; /* Pushes the value to the right */
+            }
+
+            /* Fix product image/text alignment in the stacked view */
+            .card-body.table-responsive td[data-label="Product"] {
+                display: block; /* Let the content stack naturally inside */
+                text-align: left;
+                padding-top: 0;
+            }
+
+            .card-body.table-responsive td[data-label="Product"]::before {
+                display: none; /* Hide the label for the product cell */
+            }
+
+            .card-body.table-responsive td[data-label="Quantity"] .d-flex {
+                width: 100%;
+                justify-content: flex-end !important;
+            }
+
+        }

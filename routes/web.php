@@ -20,3 +20,25 @@ Route::get('/product', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
+Route::get('/product-detail', function () {
+    return view('product-detail');
+})->name('product-detail');
+
+
+
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
+
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
+
+
+Route::get('/account', function () {
+    return view('account');
+})->name('account');
