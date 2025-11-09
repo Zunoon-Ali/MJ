@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /***** General CSS *****/
+
 body {
     word-break: break-word;
     font: 15px/25px "Poppins", sans-serif;
@@ -48,7 +49,9 @@ textarea {
     appearance: auto;
 }
 
+
 /***** Font Files *****/
+
 @font-face {
     font-family: "Fonts Awesome";
     src: url(../fonts/fontawesome-webfont.eot);
@@ -63,7 +66,9 @@ textarea {
     font-style: normal;
 }
 
+
 /***** Custom Classes *****/
+
 select {
     background: #fff url("../images/arrow.png") no-repeat right;
     padding: 0 40px 0 30px;
@@ -114,7 +119,9 @@ ul {
     list-style-type: none;
 }
 
+
 /* Headings */
+
 h1,
 h2,
 h3,
@@ -174,7 +181,9 @@ p {
     color: #377f52;
 }
 
+
 /* Apply gradient animation base to all heading and paragraph tags */
+
 h1,
 h2,
 h3,
@@ -189,7 +198,9 @@ p {
     background-size: 0% 100%;
 }
 
+
 /* Menu */
+
 .nav ul {
     list-style: none;
     text-align: center;
@@ -286,7 +297,9 @@ section.header .nav.stroke {
     color: #000 !important;
 }
 
+
 /* Buttons Css Start*/
+
 .theme-btn {
     display: flex;
     align-items: center;
@@ -346,9 +359,12 @@ section.header .nav.stroke {
     transform: translateX(-10px);
 }
 
+
 /* Buttons Css End*/
 
+
 /* Loader start */
+
 #loader {
     position: fixed;
     top: 0;
@@ -368,7 +384,7 @@ section.header .nav.stroke {
 #loader span {
     font-family: "Funky";
     color: #f7f6e5;
-   font-size: clamp(24px, 6vw, 70px);
+    font-size: clamp(24px, 6vw, 70px);
     display: block;
     line-height: 1;
     letter-spacing: 0;
@@ -408,9 +424,12 @@ img.loader {
     width: 10vw;
 }
 
+
 /* Loader end */
 
+
 /* Custom Scrollbar  */
+
 #style-6::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;
@@ -423,27 +442,23 @@ img.loader {
 
 #style-6::-webkit-scrollbar-thumb {
     background-color: #6bc86f;
-    background-image: -webkit-linear-gradient(
-        45deg,
-        #fcf9e8c4 25%,
-        transparent 25%,
-        transparent 50%,
-        #fcf9e8c4 50%,
-        #fcf9e8c4 75%,
-        transparent 75%,
-        transparent
-    );
+    background-image: -webkit-linear-gradient( 45deg, #fcf9e8c4 25%, transparent 25%, transparent 50%, #fcf9e8c4 50%, #fcf9e8c4 75%, transparent 75%, transparent);
 }
 
 .scrollbar {
     overflow-y: scroll;
 }
 
+
 /* Custom Scrollbar  */
+
 
 /* Home Page start*/
 
+
 /* Header */
+
+
 /* .hdr_logo a img {
     object-fit: scale-down;
     padding: 20px 0;
@@ -486,7 +501,6 @@ ul.hdr-right-list {
     padding: 7px 15px;
     width: fit-content;
     gap: 30px;
-
     justify-self: end;
 }
 
@@ -570,9 +584,12 @@ ul.hdr-right-list button i {
     font-size: 12px;
 }
 
+
 /* Header end*/
 
+
 /* Banner */
+
 .banner_sec {
     background-image: url(../images/banner.jpg);
     background-position: center;
@@ -638,9 +655,12 @@ img.light-img1 {
     width: 470px;
 }
 
+
 /* Banner end*/
 
+
 /* section start */
+
 img.background-bg {
     left: 0;
     position: absolute;
@@ -798,10 +818,14 @@ img.banner-card3-img {
     height: 75%;
 }
 
+
 /*end */
+
+
 /* section start */
-section.about_sec {
-}
+
+
+/* section.about_sec {} */
 
 .about-text {
     position: relative;
@@ -812,6 +836,7 @@ section.about_sec {
     gap: 20px;
     flex-direction: column;
     z-index: 2;
+    margin-bottom: 40px;
 }
 
 .black {
@@ -856,7 +881,9 @@ span.about-healz {
     bottom: 0;
 }
 
+
 /* Search Icon Button */
+
 .search-btn {
     background: none;
     border: none;
@@ -865,7 +892,9 @@ span.about-healz {
     color: #000000;
 }
 
+
 /* Fullscreen Overlay */
+
 .search-overlay {
     position: fixed;
     top: 0;
@@ -882,14 +911,18 @@ span.about-healz {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+
 /* Show overlay */
+
 .search-overlay.active {
     opacity: 1;
     visibility: visible;
     z-index: 99999;
 }
 
+
 /* Search Box */
+
 .search-box {
     display: flex;
     width: 60%;
@@ -921,7 +954,9 @@ span.about-healz {
     margin-left: 10px;
 }
 
+
 /* Close button */
+
 .close-btn {
     position: absolute;
     top: 20px;
@@ -947,9 +982,12 @@ img.green-line1 {
     left: -100px;
 }
 
+
 /* section end */
 
+
 /* section start */
+
 img.product-img {
     height: 360px;
     object-fit: contain;
@@ -968,8 +1006,7 @@ img.yellow-shape {
     width: 100px;
 }
 
-h6.black {
-}
+h6.black {}
 
 span.price h6.black {
     left: 0;
@@ -1029,11 +1066,7 @@ span.price h6.black {
 }
 
 .shine::before {
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 100%
-    );
+    background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
     content: "";
     display: block;
     height: 100%;
@@ -1072,9 +1105,12 @@ span.price h6.black {
     font-size: 20px;
 }
 
+
 /* section end */
 
+
 /* section start */
+
 .store-text p.black {
     text-transform: uppercase;
 }
@@ -1238,9 +1274,12 @@ section.about_sec.sec img.background-bg {
     object-position: top;
 }
 
+
 /* section end */
 
+
 /* section start */
+
 .tatto-card-image img {
     object-fit: scale-down;
 }
@@ -1392,12 +1431,10 @@ section.gallery-sec img.background-bg {
     height: 600px;
     border-radius: 400px;
     border: 3px solid #fff;
-
     opacity: 1;
     transform-origin: center center;
     position: relative;
     z-index: 1;
-
     animation: rotatePop 3s ease;
 }
 
@@ -1414,12 +1451,10 @@ section.gallery-sec img.background-bg {
         transform: rotate(0deg) scale(0.8);
         opacity: 0;
     }
-
     50% {
         transform: rotate(10deg) scale(1.1) translateX(0);
         opacity: 0.8;
     }
-
     100% {
         transform: rotate(-10deg) scale(1);
         opacity: 1;
@@ -1440,9 +1475,12 @@ section.gallery-sec img.background-bg {
     overflow: visible;
 }
 
+
 /* section end */
 
+
 /* section start */
+
 img.user-img {
     width: 100px;
     height: 100px;
@@ -1495,13 +1533,11 @@ img.comma-img {
         opacity: 0;
         transition: 3s ease-in-out;
     }
-
     50% {
         transform: rotate(10deg) scale(1.1) translateX(0);
         opacity: 0.8;
         transition: 3s ease-in-out;
     }
-
     100% {
         transform: rotate(-10deg) scale(1);
         opacity: 1;
@@ -1551,49 +1587,36 @@ img.comma-img {
     font-size: 13px;
 }
 
+
 /* section end */
+
 
 /* Footer */
 
 footer {
     background: #161616;
-
     padding: 47px 0 0px 0;
-
     overflow: hidden;
-
     background-image: url(../images/footer-bg.jpg);
 }
 
 footer p {
     font-size: 14px;
-
     width: 100%;
-
     color: #ffffff69;
-
     margin-bottom: 0;
-
     line-height: 1.5;
-
     font-weight: 400;
 }
 
 footer h3 {
     font-weight: 200;
-
     color: #fff;
-
     font-size: 22px;
-
     text-transform: capitalize;
-
     line-height: 45px;
-
     margin-bottom: 10px;
-
     letter-spacing: 2px;
-
     padding-top: 0;
 }
 
@@ -1603,19 +1626,12 @@ footer h3 {
 
 .quick-links ul li a {
     color: #ffff;
-
     text-transform: uppercase;
-
     font-weight: 400;
-
     font-family: "Montserrat";
-
     margin-bottom: 13px;
-
     font-size: 12px;
-
     transition: ease-in;
-
     transition-duration: 0.2s;
 }
 
@@ -1625,49 +1641,34 @@ footer h3 {
     transition-duration: 0.2s;
 }
 
-.quick-links > div {
+.quick-links>div {
     display: flex;
-
     align-items: center;
-
     justify-content: start;
-
     gap: 80px;
-
     margin: 0 0 60px 0;
 }
 
 ul.footer-list li a {
     font-size: 17px;
-
     color: #ffffffa6;
-
     line-height: 40px;
-
     font-weight: 300;
 }
 
 ul.ftr-list li a {
     display: flex;
-
     align-items: center;
-
     justify-content: flex-start;
-
     gap: 10px;
-
     font-size: 12px;
-
     color: #c1c1c3;
-
     padding-top: 10px;
-
     margin-bottom: 10px;
 }
 
 ul.ftr-list li a p {
     line-height: 1;
-
     color: #fff;
 }
 
@@ -1686,21 +1687,17 @@ ul.ftr-list li a img {
 
 ul.ftr-list i {
     color: #606e76;
-
     font-size: 24px;
 }
 
 .footer-text {
     width: 94%;
-
     margin: 60px 0 0 auto;
 }
 
 .quick-links {
     width: 90%;
-
     margin: 60px 0 0 auto;
-
     margin-bottom: 0;
 }
 
@@ -1711,17 +1708,11 @@ ul.ftr-list i {
 footer .col-md-3:before,
 footer .col-md-2:before {
     position: absolute;
-
     content: "";
-
     background-color: #ffffff69;
-
     right: 0;
-
     height: 100%;
-
     width: 1px;
-
     top: 0;
 }
 
@@ -1845,7 +1836,6 @@ section.testimonial-sec {
     0% {
         transform: translateY(-3000%);
     }
-
     100% {
         transform: translateY(0%);
     }
@@ -1855,7 +1845,6 @@ section.testimonial-sec {
     0% {
         transform: translateY(2000%);
     }
-
     100% {
         transform: translateY(0%);
     }
@@ -1897,6 +1886,7 @@ img.product-leaf2 {
     bottom: 130px;
     left: 400px;
 }
+
 
 /* Footer Ends */
 
@@ -1952,8 +1942,12 @@ img.store-shape2 {
     position: relative;
 }
 
+
 /* section start */
+
+
 /* section end */
+
 
 /* Home Page end*/
 
@@ -1971,7 +1965,7 @@ img.store-shape2 {
 .product_product-sec .background-bg {
     left: 0;
     position: absolute;
-    top: -17%;
+    top: -19%;
     width: 100%;
     height: 132%;
     z-index: -1;
@@ -1985,6 +1979,7 @@ img.product-leaf2 {
     bottom: 130px;
     left: 10%;
 }
+
 
 /* .product_gallery-sec .background-bg{
     left: 0;
@@ -2017,6 +2012,7 @@ footer {
     position: absolute;
     transform: rotate(268deg);
 }
+
 
 /* @media (min-width: 800px) and (max-width: 1400px){
     body {
@@ -2084,8 +2080,10 @@ footer {
     z-index: 1;
 }
 
+
 /* Make sure your content is above the overlay */
-.slide2 > * {
+
+.slide2>* {
     position: relative;
     z-index: 2;
 }
@@ -2184,7 +2182,9 @@ footer {
     color: #a4e96b;
 }
 
+
 /* Container & layout adjustments */
+
 .contact_cf-container {
     position: relative;
     z-index: 2;
@@ -2202,7 +2202,9 @@ footer {
     transform: translateY(-5px);
 }
 
+
 /* Inputs */
+
 .contact_cf-input {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -2219,7 +2221,9 @@ footer {
     outline: none;
 }
 
+
 /* Text styles */
+
 .contact_cf-text h2 {
     color: #337a4e;
     font-weight: 600;
@@ -2244,12 +2248,13 @@ footer {
     color: #111;
 }
 
+
 /* Responsive */
+
 @media (max-width: 768px) {
     .contact_cf-row {
         text-align: center;
     }
-
     .contact_cf-form-box {
         margin-top: 30px;
     }
@@ -2279,9 +2284,12 @@ section.product-detail.sec {
     padding: 180px 0 200px 0;
 }
 
+
 /* ==== Product Detail Page ==== */
 
+
 /* ==== Product Info / Review Section ==== */
+
 .product-info {
     background-color: #fff;
     padding: 80px 0;
@@ -2431,7 +2439,9 @@ section.product-detail.sec {
     font-size: 14px;
 }
 
+
 /* Restore number input arrows in Chrome, Edge, Safari */
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
@@ -2440,13 +2450,16 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+
 /* Optional: style the number input to match your theme */
+
 input[type="number"] {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 5px;
 }
+
 
 /* ==== Responsive ==== */
 
@@ -2455,7 +2468,6 @@ input[type="number"] {
         padding: 60px 0;
         text-align: center;
     }
-
     .product-detail img {
         margin-bottom: 30px;
     }
@@ -2489,9 +2501,11 @@ input[type="number"] {
 input.form-control.form-control-sm.text-center.mx-2 {
     margin: 0;
 }
+
 section.cart-page.sec.py-5.bg-light {
     padding: 200px 0 !important;
 }
+
 .checkout-page .card {
     border-radius: 16px;
 }
@@ -2557,116 +2571,117 @@ section.cart-page.sec.py-5.bg-light {
     font-family: "Funky";
     font-size: 20px;
 }
+
 .banner-box .row {
     padding-top: 54px;
 }
 
-    /* Make tables scroll horizontally on smaller screens */
-        .table-responsive {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
 
-        /* Custom Scrollbar for better UX on desktop/tablets */
-        .table-responsive::-webkit-scrollbar {
-            height: 8px;
-        }
-        .table-responsive::-webkit-scrollbar-thumb {
-            background: #377f52; /* Green color */
-            border-radius: 4px;
-        }
-        .table-responsive::-webkit-scrollbar-thumb:hover {
-            background: #2a6140;
-        }
+/* Make tables scroll horizontally on smaller screens */
 
-        /* Ensure Product details don't wrap in their cell */
-        .product-details-container {
-            min-width: 250px;
-        }
-
-        /* Mobile Table Transformation (Stacking Rows) */
-        @media (max-width: 768px) {
-            /* Ensures the main table (col-lg-8) becomes a vertically stacked list of cards */
-            .card-body.table-responsive .table {
-                /* Reset standard table behavior on mobile to allow the flex transformation */
-                display: block;
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            .card-body.table-responsive thead {
-                /* Hide the standard table header on mobile */
-                display: none;
-            }
-
-            .card-body.table-responsive tr {
-                /* Turn rows into blocks (like cards) */
-                display: block;
-                margin-bottom: 1rem;
-                border: 1px solid #dee2e6;
-                border-radius: 0.5rem;
-                padding: 0.5rem;
-            }
-
-            .card-body.table-responsive td {
-                /* Make each cell a flex row */
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                text-align: right;
-                border: none;
-                padding: 0.5rem 0.75rem;
-            }
-
-            .card-body.table-responsive td:last-child {
-                border-bottom: none;
-            }
-
-            .card-body.table-responsive td::before {
-                /* Use data-label to show the column header */
-                content: attr(data-label);
-                font-weight: 600;
-                text-transform: capitalize;
-                text-align: left;
-                flex-grow: 1; /* Pushes the value to the right */
-            }
-
-            /* Fix product image/text alignment in the stacked view */
-            .card-body.table-responsive td[data-label="Product"] {
-                display: block; /* Let the content stack naturally inside */
-                text-align: left;
-                padding-top: 0;
-            }
-
-            .card-body.table-responsive td[data-label="Product"]::before {
-                display: none; /* Hide the label for the product cell */
-            }
-
-            .card-body.table-responsive td[data-label="Quantity"] .d-flex {
-                width: 100%;
-                justify-content: flex-end !important;
-            }
-
-        }
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
 
+/* Custom Scrollbar for better UX on desktop/tablets */
 
-        .desktop .col-lg-3{
-            margin-top: 0;
-            background: transparent;
-        }
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
 
-        ul#menu {
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #377f52;
+    /* Green color */
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #2a6140;
+}
+
+
+/* Ensure Product details don't wrap in their cell */
+
+.product-details-container {
+    min-width: 250px;
+}
+
+
+/* Mobile Table Transformation (Stacking Rows) */
+
+@media (max-width: 768px) {
+    /* Ensures the main table (col-lg-8) becomes a vertically stacked list of cards */
+    .card-body.table-responsive .table {
+        /* Reset standard table behavior on mobile to allow the flex transformation */
+        display: block;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .card-body.table-responsive thead {
+        /* Hide the standard table header on mobile */
+        display: none;
+    }
+    .card-body.table-responsive tr {
+        /* Turn rows into blocks (like cards) */
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+    .card-body.table-responsive td {
+        /* Make each cell a flex row */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        border: none;
+        padding: 0.5rem 0.75rem;
+    }
+    .card-body.table-responsive td:last-child {
+        border-bottom: none;
+    }
+    .card-body.table-responsive td::before {
+        /* Use data-label to show the column header */
+        content: attr(data-label);
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: left;
+        flex-grow: 1;
+        /* Pushes the value to the right */
+    }
+    /* Fix product image/text alignment in the stacked view */
+    .card-body.table-responsive td[data-label="Product"] {
+        display: block;
+        /* Let the content stack naturally inside */
+        text-align: left;
+        padding-top: 0;
+    }
+    .card-body.table-responsive td[data-label="Product"]::before {
+        display: none;
+        /* Hide the label for the product cell */
+    }
+    .card-body.table-responsive td[data-label="Quantity"] .d-flex {
+        width: 100%;
+        justify-content: flex-end !important;
+    }
+}
+
+.desktop .col-lg-3 {
+    margin-top: 0;
+    background: transparent;
+}
+
+ul#menu {
     justify-content: space-evenly;
-    display: flex
-;
+    display: flex;
     align-items: center;
     height: 100%;
     justify-content: center;
 }
 
-
-.product_sec .col-lg-3{
+.product_sec .col-lg-3 {
     background-color: transparent;
 }
-

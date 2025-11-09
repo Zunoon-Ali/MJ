@@ -152,6 +152,7 @@
   /* ===== Desktop Header ===== */
   .header.desktop {
     background: url("{{ asset('images/banner.jpg') }}") no-repeat center center/cover;
+    /* opacity: 0.5; */
   }
 
   /* ===== Mobile Header ===== */
