@@ -1,0 +1,32 @@
+<div class="sidebar">
+    <h2>Admin Panel</h2>
+    <hr style="border-color: #555;">
+    <ul>
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">📦 Products</a>
+            <ul>
+                <li><a href="#" style="padding-left: 20px;">List Products</a></li>
+                <li><a href="#" style="padding-left: 20px;">Add New Product</a></li>
+            </ul>
+        </li>
+        <li><a href="#">👤 Users</a>
+            <ul>
+                <li><a href="#" style="padding-left: 20px;">User Listing</a></li>
+                <li><a href="#" style="padding-left: 20px;">Admins</a></li>
+            </ul>
+        </li>
+        <li><a href="#">📝 Orders</a></li>
+        <li><a href="#">✉️ Contact Messages</a></li>
+        <li><a href="#">ℹ️ About Page Settings</a></li>
+        <li><a href="#">⚙️ Site Settings</a></li>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            <a href="{{ route('logout') }}" 
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+               style="color: #ff4d4d; font-weight: bold;">
+                <span style="padding-right: 5px;">🚪</span> Logout
+            </a>
+        </li>
+    </ul>
+</div>

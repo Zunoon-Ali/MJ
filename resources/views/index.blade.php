@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div id="loader">
+<!-- <div id="loader">
     <div class="loader-box">
         <div class="first loader-column">
             <span>
@@ -198,7 +198,7 @@
             <img src="{{ url('images/product9.png') }}" alt="Root Herb Care" class="loader-img">
         </div>
     </div>
-</div>
+</div> -->
 
 
 <!-- banner start -->

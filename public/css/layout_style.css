@@ -1,0 +1,51 @@
+/* Basic Reset/Box-Sizing */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Layout Container: Uses Flexbox for easy side-by-side layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh; /* Make sure it takes up the full viewport height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    flex: 0 0 15%; /* Takes exactly 15% of the width */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fix the sidebar position */
+    height: 100vh; /* Ensure the fixed sidebar takes full height */
+    overflow-y: auto; /* Scrollable sidebar if content is long */
+    z-index: 10; /* Keep sidebar on top */
+}
+
+/* Content Area Styles */
+.content-area {
+    flex: 1; /* Takes the remaining space */
+    width: 85%; /* Explicitly define remaining width */
+    margin-left: 15%; /* Pushes the content area away from the fixed sidebar */
+    padding: 20px;
+    overflow-y: auto; /* Makes the content scrollable when it exceeds the height */
+}
+
+/* Sidebar Menu Styling (Optional for better look) */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
