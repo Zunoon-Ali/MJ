@@ -16,10 +16,15 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->is_admin) {
-            abort(403, 'Unauthorized.');
-        }
+       if (!Auth::check()) {
+        return redirect('/login');
+    }
+
+    if (Auth::user()->is_admin == 1) {
+        return redirect('/dashboard/admin');
+    }
 
         return $next($request);
+
     }
 }

@@ -35,16 +35,12 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $adminEmails = [
-            'zunnoon2006@gmail.com',
-            'bscs2312405@szabist.pk'
-        ];
-
+        // All public registrations create regular users (not admins)
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'is_admin' => in_array($request->email, $adminEmails) ? 1 : 0,
+            'is_admin' => 0, // Always 0 for public registration
         ]);
 
 
@@ -52,6 +48,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('login', absolute: false));
+        // All new registrations go to user dashboard
+        return redirect('/dashboard/user');
     }
 }

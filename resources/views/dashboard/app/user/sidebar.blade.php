@@ -1,8 +1,9 @@
 <div class="sidebar" style="background-color: #007bff;">
-    <h2>My Account</h2>
+    <h2>User Dashbaord</h2>
     <h3></h3>
     <hr style="border-color: #57a8ff;">
     <ul>
+        
         <li><a href="#">🏠 Dashboard Overview</a></li>
         <li><a href="#">🛍️ My Orders</a></li>
         <li><a href="#">❤️ Wishlist</a></li>
