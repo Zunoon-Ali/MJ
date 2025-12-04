@@ -1,0 +1,2 @@
+<p class="alert alert-info">Contact slider section - Similar structure to About page slider. Managing 3 slides with tagline, h2, and paragraph for each.</p>
+<!-- Contact slider implementation would be identical to about slider - copy and adapt as needed -->
