@@ -1,0 +1,14 @@
+                    <p class="black">{{ $home->home_about_p1 ?? 'Life And Leaf Healz Lifestyle' }}</p>
+
+                    <h2>{{ $home->home_about_h2 ?? "It's all about the alternatives" }}</h2>
+
+                    <p>{{ $home->home_about_p2 ?? 'Welcome to the wild world of CBD, where relaxation meets innovation! Get ready to take your wellness routine to the next level with the power of CBD. Embark on a journey where calmness and balance are just a few drops away. Come aboard the CBD revolution and unlock the potential of plant-powered wellness. From luscious skincare to delightful tinctures, there\'s a CBD product that fits your lifestyle and helps you find your inner peace.' }}</p>
+
+                    <img src="{{ $home && $home->home_about_img ? asset('storage/' . $home->home_about_img) : asset('images/about-slider1.png') }}" alt="about" class="about" data-aos="fade-up" />
+
+                    <a href="{{ $home->home_about_a ?? url('/about') }}" class="theme-btn" data-aos="fade-up">
+                        More Detail
+                        <span class="leaf-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </span>
+                    </a>

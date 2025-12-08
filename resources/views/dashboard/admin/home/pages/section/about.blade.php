@@ -18,6 +18,7 @@
                         <tr>
                             <th style="white-space: nowrap;">H2 Title</th>
                             <th style="white-space: nowrap;">Paragraph 1</th>
+                            <th style="white-space: nowrap;">Paragraph 2</th>
                             <th style="white-space: nowrap;">Image</th>
                             <th style="white-space: nowrap;">Link</th>
                             <th style="white-space: nowrap;">Actions</th>
@@ -28,6 +29,7 @@
                         <tr>
                             <td>{{ $home->home_about_h2 }}</td>
                             <td>{{Str::limit($home->home_about_p1, 50)}}</td>
+                            <td>{{Str::limit($home->home_about_p2, 50)}}</td>
                             <td>
                                 @if($home->home_about_img)
                                 <img src="{{ asset('storage/' . $home->home_about_img) }}" width="50" alt="About Img">
@@ -47,7 +49,7 @@
                         </tr>
                         @else
                         <tr>
-                            <td colspan="5" class="text-center">No about content found.</td>
+                            <td colspan="6" class="text-center">No about content found.</td>
                         </tr>
                         @endif
                     </tbody>

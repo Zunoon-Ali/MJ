@@ -5,7 +5,7 @@
  @section('content')
 
 
- <div id="loader">
+ <!-- <div id="loader">
      <div class="loader-box">
          <div class="first loader-column">
              <span>
@@ -199,10 +199,9 @@
              <img src="{{ url('images/product-loader.png') }}" alt="Root Herb Care" class="loader-img">
          </div>
      </div>
- </div>
+ </div> -->
 
 
- <!-- banner start -->
  <!-- banner start -->
  <section class="product_banner">
  </section>
@@ -292,7 +291,7 @@
                              <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
                              <h6 class="black">{{ $product->stock }} <br> in stock</h6>
                          </span>
-                         <a href="{{ url('product-detail') }}">
+                         <a href="{{ route('product.detail', $product->id) }}">
                              @if($product->image)
                              <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="product-img">
                              @else
@@ -302,7 +301,7 @@
                      </div>
                      <div class="product-card-text">
                          <h6>{{ $product->name }}</h6>
-                         <a href="{{ url('product-detail') }}" class="theme-btn">${{ number_format($product->price, 2) }}
+                         <a href="{{ route('product.detail', $product->id) }}" class="theme-btn">${{ number_format($product->price, 2) }}
                              <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                          </a>
                      </div>
@@ -313,85 +312,7 @@
                  <p class="text-center">No products available at the moment.</p>
              </div>
              @endforelse
-             <!-- <div class="col-lg-3 col-md-6 col-sm-12">
-                 <div class="product-card" data-aos="fade-up">
-                     <div class="product-card-image">
-                         <span class="price">
-                             <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
-                             <h6 class="black">250 <br> mg</h6>
-                         </span>
-                         <a href="{{ url('product-detail') }}">
-                             <img src="{{ asset('images/product4.png') }}" alt="product-img" class="product-img">
-                         </a>
-                     </div>
-                     <div class="product-card-text">
-                         <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
-                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-3 col-md-6 col-sm-12">
-                 <div class="product-card" data-aos="fade-up">
-                     <div class="product-card-image">
-                         <span class="price">
-                             <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
-                             <h6 class="black">250 <br> mg</h6>
-                         </span>
-                         <a href="{{ url('product-detail') }}">
-                             <img src="{{ asset('images/product4.png') }}" alt="product-img" class="product-img">
-                         </a>
-                     </div>
-                     <div class="product-card-text">
-                         <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
-                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-3 col-md-6 col-sm-12">
-                 <div class="product-card" data-aos="fade-up">
-                     <div class="product-card-image">
-                         <span class="price">
-                             <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
-                             <h6 class="black">250 <br> mg</h6>
-                         </span>
-                         <a href="{{ url('product-detail') }}">
-                             <img src="{{ asset('images/product4.png') }}" alt="product-img" class="product-img">
-                         </a>
-                     </div>
-                     <div class="product-card-text">
-                         <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
-                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-lg-3 col-md-6 col-sm-12">
-                 <div class="product-card" data-aos="fade-up">
-                     <div class="product-card-image">
-                         <span class="price">
-                             <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
-                             <h6 class="black">250 <br> mg</h6>
-                         </span>
-                         <a href="{{ url('product-detail') }}">
-                             <img src="{{ asset('images/product4.png') }}" alt="product-img" class="product-img">
-                         </a>
-                     </div>
-                     <div class="product-card-text">
-                         <h6>Products Name Here</h6>
-                         <a href="#" class="theme-btn">$39.99
-                             <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                         </a>
-                     </div>
-                 </div>
-             </div> -->
-
-
-
+           
          </div>
      </div>
 
@@ -400,9 +321,6 @@
  <!-- product-sec end -->
 
 
-
- <!-- section gallery-sec start -->
- <!-- gallery_sec start -->
  <!-- gallery_sec start -->
  <section class="gallery-sec sec">
      <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />

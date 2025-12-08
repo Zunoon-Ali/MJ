@@ -40,6 +40,25 @@
                 <i class="fa-solid fa-cart-shopping"></i>
               </a>
             </li>
+            <!-- ✅ Auth Buttons -->
+            @auth
+            @if(Auth::user()->role !== 'admin')
+            <li>
+              <form id="logout-form-desktop" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                @csrf
+                <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0;">
+                  <i class="fa-solid fa-right-from-bracket" title="Logout"></i>
+                </button>
+              </form>
+            </li>
+            @endif
+            @else
+            <li>
+              <a href="{{ route('login') }}" title="Login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+              </a>
+            </li>
+            @endauth
           </ul>
         </div>
       </div>
@@ -85,6 +104,24 @@
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </li>
+          @auth
+          @if(Auth::user()->role !== 'admin')
+          <li>
+            <form id="logout-form-mobile" action="{{ route('logout') }}" method="POST" style="display: inline;">
+              @csrf
+              <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0;">
+                <i class="fa-solid fa-right-from-bracket" title="Logout"></i>
+              </button>
+            </form>
+          </li>
+          @endif
+          @else
+          <li>
+            <a href="{{ route('login') }}" title="Login">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+          </li>
+          @endauth
         </ul>
       </div>
     </div>

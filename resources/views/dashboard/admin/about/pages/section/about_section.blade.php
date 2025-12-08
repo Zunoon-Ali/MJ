@@ -19,6 +19,7 @@
                             <th style="white-space: nowrap;">Tagline</th>
                             <th style="white-space: nowrap;">H2</th>
                             <th style="white-space: nowrap;">Paragraph</th>
+                            <th style="white-space: nowrap;">Link</th>
                             <th style="white-space: nowrap;">Image</th>
                             <th style="white-space: nowrap;">Actions</th>
                         </tr>
@@ -29,6 +30,7 @@
                             <td>{{ Str::limit($about->about_tagline, 20) }}</td>
                             <td>{{ Str::limit($about->about_h2, 20) }}</td>
                             <td>{{ Str::limit($about->about_p, 30) }}</td>
+                            <td>{{ $about->about_link }}</td>
                             <td>
                                 @if($about->about_img)
                                 <img src="{{ asset('storage/' . $about->about_img) }}" width="50">
@@ -44,7 +46,7 @@
                         </tr>
                         @else
                         <tr>
-                            <td colspan="5" class="text-center">No about content found.</td>
+                            <td colspan="6" class="text-center">No about content found.</td>
                         </tr>
                         @endif
                     </tbody>

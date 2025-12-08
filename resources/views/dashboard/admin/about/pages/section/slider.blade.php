@@ -21,8 +21,13 @@
                         <tr>
                             <th style="white-space: nowrap;">Slide 1 Tagline</th>
                             <th style="white-space: nowrap;">Slide 1 H2</th>
+                            <th style="white-space: nowrap;">Slide 1 P</th>
                             <th style="white-space: nowrap;">Slide 2 Tagline</th>
+                            <th style="white-space: nowrap;">Slide 2 H2</th>
+                            <th style="white-space: nowrap;">Slide 2 P</th>
                             <th style="white-space: nowrap;">Slide 3 Tagline</th>
+                            <th style="white-space: nowrap;">Slide 3 H2</th>
+                            <th style="white-space: nowrap;">Slide 3 P</th>
                             <th style="white-space: nowrap;">Actions</th>
                         </tr>
                     </thead>
@@ -31,8 +36,13 @@
                         <tr>
                             <td>{{ Str::limit($about->slider1_tagline, 20) }}</td>
                             <td>{{ Str::limit($about->slider1_h2, 20) }}</td>
+                            <td>{{ Str::limit($about->slider1_p, 30) }}</td>
                             <td>{{ Str::limit($about->slider2_tagline, 20) }}</td>
+                            <td>{{ Str::limit($about->slider2_h2, 20) }}</td>
+                            <td>{{ Str::limit($about->slider2_p, 30) }}</td>
                             <td>{{ Str::limit($about->slider3_tagline, 20) }}</td>
+                            <td>{{ Str::limit($about->slider3_h2, 20) }}</td>
+                            <td>{{ Str::limit($about->slider3_p, 30) }}</td>
                             <td>
                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editSliderModal">
                                     <i class="fa fa-edit"></i> Edit
@@ -41,7 +51,7 @@
                         </tr>
                         @else
                         <tr>
-                            <td colspan="5" class="text-center">No slider content found.</td>
+                            <td colspan="10" class="text-center">No slider content found.</td>
                         </tr>
                         @endif
                     </tbody>

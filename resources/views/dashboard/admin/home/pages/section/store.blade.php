@@ -18,7 +18,11 @@
                         <tr>
                             <th style="white-space: nowrap;">Heading H2</th>
                             <th style="white-space: nowrap;">Paragraph 1</th>
+                            <th style="white-space: nowrap;">Paragraph 2</th>
+                            <th style="white-space: nowrap;">Link</th>
+                            <th style="white-space: nowrap;">Card 1 Image</th>
                             <th style="white-space: nowrap;">Card 1 Text</th>
+                            <th style="white-space: nowrap;">Card 2 Image</th>
                             <th style="white-space: nowrap;">Card 2 Text</th>
                             <th style="white-space: nowrap;">Actions</th>
                         </tr>
@@ -28,7 +32,23 @@
                         <tr>
                             <td>{{ $home->home_store_h2 }}</td>
                             <td>{{Str::limit($home->home_store_p1, 50)}}</td>
+                            <td>{{Str::limit($home->home_store_p2, 50)}}</td>
+                            <td>{{ $home->home_store_a }}</td>
+                            <td>
+                                @if($home->home_store_card1_img)
+                                <img src="{{ asset('storage/' . $home->home_store_card1_img) }}" width="50" alt="Card 1 Img">
+                                @else
+                                <span class="text-muted">N/A</span>
+                                @endif
+                            </td>
                             <td>{{ $home->home_store_card1_text }}</td>
+                            <td>
+                                @if($home->home_store_card2_img)
+                                <img src="{{ asset('storage/' . $home->home_store_card2_img) }}" width="50" alt="Card 2 Img">
+                                @else
+                                <span class="text-muted">N/A</span>
+                                @endif
+                            </td>
                             <td>{{ $home->home_store_card2_text }}</td>
                             <td>
                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editStoreModal">
@@ -43,7 +63,7 @@
                         </tr>
                         @else
                         <tr>
-                            <td colspan="5" class="text-center">No store content found.</td>
+                            <td colspan="9" class="text-center">No store content found.</td>
                         </tr>
                         @endif
                     </tbody>

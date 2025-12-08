@@ -1,0 +1,89 @@
+                    <!-- ✅ Reviews Tab -->
+                    <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                        <div class="reviews-section">
+                            @forelse($product->reviews as $review)
+                            <div class="review-item mb-4 pb-3 border-bottom">
+                                <h6 class="mb-1">{{ $review->reviewer_name }}</h6>
+                                <p class="rating text-warning mb-2">
+                                    @for($i = 1; $i <= 5; $i++)
+                                        @if($i <= $review->rating)
+                                            ★
+                                        @else
+                                            ☆
+                                        @endif
+                                    @endfor
+                                    <small class="text-muted ms-2">({{ $review->rating }}/5)</small>
+                                </p>
+                                <p class="mb-1">"{{ $review->review }}"</p>
+                                <small class="text-muted">{{ $review->created_at->diffForHumans() }}</small>
+                            </div>
+                            @empty
+                            <div class="text-center py-4">
+                                <p class="text-muted">No reviews yet. Be the first to review this product!</p>
+                            </div>
+                            @endforelse
+
+                            <!-- Review Form -->
+                            <div class="review-form mt-5">
+                                <h5 class="mb-4">Leave a Review</h5>
+                                
+                                @if(session('success'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{ session('success') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                </div>
+                                @endif
+
+                                <form action="{{ route('review.store', $product->id) }}" method="POST">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Your Name <span class="text-danger">*</span></label>
+                                            <input type="text" name="reviewer_name" class="form-control @error('reviewer_name') is-invalid @enderror" 
+                                                   placeholder="Enter your name" 
+                                                   value="{{ old('reviewer_name', Auth::user()->name ?? '') }}" required>
+                                            @error('reviewer_name')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Your Email (Optional)</label>
+                                            <input type="email" name="reviewer_email" class="form-control @error('reviewer_email') is-invalid @enderror" 
+                                                   placeholder="your@email.com" 
+                                                   value="{{ old('reviewer_email', Auth::user()->email ?? '') }}">
+                                            @error('reviewer_email')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Rating <span class="text-danger">*</span></label>
+                                        <select name="rating" class="form-select @error('rating') is-invalid @enderror" required>
+                                            <option value="">Select Rating</option>
+                                            <option value="5" {{ old('rating') == 5 ? 'selected' : '' }}>★★★★★ (5 Stars)</option>
+                                            <option value="4" {{ old('rating') == 4 ? 'selected' : '' }}>★★★★☆ (4 Stars)</option>
+                                            <option value="3" {{ old('rating') == 3 ? 'selected' : '' }}>★★★☆☆ (3 Stars)</option>
+                                            <option value="2" {{ old('rating') == 2 ? 'selected' : '' }}>★★☆☆☆ (2 Stars)</option>
+                                            <option value="1" {{ old('rating') == 1 ? 'selected' : '' }}>★☆☆☆☆ (1 Star)</option>
+                                        </select>
+                                        @error('rating')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Your Review <span class="text-danger">*</span></label>
+                                        <textarea name="review" class="form-control @error('review') is-invalid @enderror" 
+                                                  rows="5" placeholder="Tell us what you think about this product (minimum 10 characters)..." required>{{ old('review') }}</textarea>
+                                        <small class="text-muted">Minimum 10 characters required</small>
+                                        @error('review')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <button type="submit" class="theme-btn">
+                                        Submit Review
+                                        <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
