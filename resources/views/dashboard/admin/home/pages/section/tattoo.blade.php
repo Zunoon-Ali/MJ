@@ -16,28 +16,50 @@
                 <table class="table table-bordered table-sm" style="white-space: nowrap;">
                     <thead>
                         <tr>
-                            <th style="white-space: nowrap;">Heading H2</th>
                             <th style="white-space: nowrap;">Paragraph 1</th>
+                            <th style="white-space: nowrap;">Heading H2</th>
+                            <th style="white-space: nowrap;">Paragraph 2</th>
                             <th style="white-space: nowrap;">Left Card Img</th>
                             <th style="white-space: nowrap;">Right Card Img</th>
+                            <th style="white-space: nowrap;">Card 2 Text</th>
+                            <th style="white-space: nowrap;">Card 1 H5</th>
+                            <th style="white-space: nowrap;">Card 1 P</th>
+                            <th style="white-space: nowrap;">Card 2 H5</th>
+                            <th style="white-space: nowrap;">Card 2 P</th>
+                            <th style="white-space: nowrap;">Card 3 H5</th>
+                            <th style="white-space: nowrap;">Card 3 P</th>
+                            <th style="white-space: nowrap;">Link</th>
                             <th style="white-space: nowrap;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         @if($home)
                         <tr>
+                            <td>{{Str::limit($home->home_tatto_cont_p1, 30)}}</td>
                             <td>{{ $home->home_tatto_cont_h2 }}</td>
-                            <td>{{Str::limit($home->home_tatto_cont_p1, 50)}}</td>
+                            <td>{{Str::limit($home->home_tatto_cont_p2, 30)}}</td>
                             <td>
                                 @if($home->home_tatto_left_card2_img)
                                 <img src="{{ asset('storage/' . $home->home_tatto_left_card2_img) }}" width="50" alt="Left Img">
+                                @else
+                                <span class="text-muted">N/A</span>
                                 @endif
                             </td>
                             <td>
                                 @if($home->home_tatto_right_card2_img)
                                 <img src="{{ asset('storage/' . $home->home_tatto_right_card2_img) }}" width="50" alt="Right Img">
+                                @else
+                                <span class="text-muted">N/A</span>
                                 @endif
                             </td>
+                            <td>{{ $home->home_tatto_card2_text }}</td>
+                            <td>{{ $home->home_tatto_cont_card1_h5 }}</td>
+                            <td>{{Str::limit($home->home_tatto_cont_card1_p, 30)}}</td>
+                            <td>{{ $home->home_tatto_cont_card2_h5 }}</td>
+                            <td>{{Str::limit($home->home_tatto_cont_card2_p, 30)}}</td>
+                            <td>{{ $home->home_tatto_cont_card3_h5 }}</td>
+                            <td>{{Str::limit($home->home_tatto_cont_card3_p, 30)}}</td>
+                            <td>{{ $home->home_tatto_cont_a }}</td>
                             <td>
                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editTattooModal">
                                     Edit
@@ -51,7 +73,7 @@
                         </tr>
                         @else
                         <tr>
-                            <td colspan="5" class="text-center">No tattoo content found.</td>
+                            <td colspan="14" class="text-center">No tattoo content found.</td>
                         </tr>
                         @endif
                     </tbody>

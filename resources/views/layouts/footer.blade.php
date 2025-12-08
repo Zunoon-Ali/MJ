@@ -103,10 +103,63 @@
       margin: 166px 0 50px 0;
       padding: 300px 0 20px 0;
     }
+
     .quick-links {
       width: 90%;
       margin: 15px 0 0 auto;
       margin-bottom: 0;
+    }
+  }
+
+  /* Floating Dashboard Button */
+  .floating-dashboard-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .floating-dashboard-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    color: white;
+  }
+
+  .floating-dashboard-btn i {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .floating-dashboard-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      bottom: 20px;
+      right: 20px;
     }
   }
 </style>

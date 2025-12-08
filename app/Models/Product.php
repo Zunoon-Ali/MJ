@@ -23,4 +23,10 @@ class Product extends Model
         'price' => 'decimal:2',
         'is_active' => 'boolean',
     ];
+
+    // Relationship: Product has many Reviews
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

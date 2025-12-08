@@ -45,6 +45,15 @@
     {{-- ===================== PAGE CONTENT ===================== --}}
     @yield('content')
 
+    {{-- ===================== FLOATING DASHBOARD BUTTON ===================== --}}
+    @auth
+    @if(Auth::user()->role === 'user')
+    <a href="{{ url('/dashboard/user') }}" class="floating-dashboard-btn" title="Go to Dashboard">
+        <i class="fas fa-tachometer-alt"></i>
+    </a>
+    @endif
+    @endauth
+
     {{-- ===================== FOOTER ===================== --}}
     @include('layouts.footer')
 
