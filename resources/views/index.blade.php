@@ -339,41 +339,78 @@
                 </div>
             </div>
 
-            {{-- Dynamic Products from Database (4 latest) --}}
-            @forelse($products as $product)
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="product-card" data-aos="fade-up">
-                    <div class="product-card-image">
-                        <span class="price">
-                            <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
-                            <h6 class="black">{{ $product->stock }} <br> in stock</h6>
-                        </span>
-                        <a href="{{ route('product.detail', $product->id) }}">
-                            @if($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="product-img">
-                            @else
-                            <img src="{{ asset('images/product2.png') }}" alt="{{ $product->name }}" class="product-img">
-                            @endif
-                        </a>
+            {{-- Search Bar & Sort --}}
+            <!-- <div class="col-lg-12 mb-4">
+                <div class="product-search-container" style="max-width: 800px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                    <div class="input-group" style="flex: 1; min-width: 300px;">
+                        <input type="text" id="homeProductSearch" class="form-control" placeholder="Search products by name, category, price..." style="border-radius: 25px 0 0 25px; padding: 12px 20px; border: 2px solid #377f52;">
+                        <button class="btn" type="button" style="background: #377f52; color: white; border-radius: 0 25px 25px 0; padding: 12px 20px; border: 2px solid #377f52; border-left: none;">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
                     </div>
-                    <div class="product-card-text">
-                        <h6>{{ $product->name }}</h6>
-                        <a href="{{ route('product.detail', $product->id) }}" class="theme-btn">${{ number_format($product->price, 2) }}
-                            <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                        </a>
+
+
+                    <div id="homeSearchLoading" style="display: none; width: 100%; text-align: center; margin-top: 10px;">
+                        <small style="color: #377f52;"><i class="fa-solid fa-spinner fa-spin"></i> Searching...</small>
                     </div>
                 </div>
-            </div>
-            @empty
-            <div class="col-12">
-                <p class="text-center">No products available. Add products in the admin panel!</p>
-            </div>
-            @endforelse
+            </div> -->
 
+            {{-- Products Container --}}
+            <div id="homeProductsContainer" class="row">
+
+                @forelse($products as $product)
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    @php
+                    $inStock = $product->stock > 0;
+                    $linkAttr = $inStock ? 'href="' . route('product.detail', $product->id) . '"' : 'href="javascript:void(0)"';
+                    $btnClass = $inStock ? 'theme-btn' : 'theme-btn disabled';
+                    @endphp
+                    <div class="product-card" data-aos="fade-up" @if(!$inStock) style="opacity: 0.7; pointer-events: none;" @endif>
+                        <div class="product-card-image">
+                            <span class="price">
+                                <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
+                                @if($inStock)
+                                <h6 class="black">{{ $product->stock }} <br> in stock</h6>
+                                @else
+                                <h6 class="text-danger out-of-stock-label">Out of<br>Stock</h6>
+                                @endif
+                            </span>
+                            <a {!! $linkAttr !!}>
+                                @if($product->image)
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="product-img">
+                                @else
+                                <img src="{{ asset('images/product2.png') }}" alt="{{ $product->name }}" class="product-img">
+                                @endif
+                            </a>
+                        </div>
+                        <div class="product-card-text">
+                            <h6>{{ $product->name }}</h6>
+                            <a {!! $linkAttr !!} class="{{ $btnClass }}">${{ number_format($product->price, 2) }}
+                                <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @empty
+                <div class="col-12">
+                    <p class="text-center">No products available. Add products in the admin panel!</p>
+                </div>
+                @endforelse
+
+            </div>
+
+            {{-- View More Button --}}
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12 text-center">
+                    <a href="/product#products" class="theme-btn">
+                        View More Products <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <img src="{{ asset('images/product-leaf2.png') }}" alt="product-leaf" class="product-leaf2">
+        <img src="{{ asset('images/product-leaf2.png') }}" alt="product-leaf" class="product-leaf2">
 </section>
 <!-- product-sec end -->
 
@@ -693,5 +730,122 @@
 </section>
 <!-- testimonial_sec end -->
 
+
+<script>
+    // Home Page Product Search with AJAX
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('homeProductSearch');
+        const productsContainer = document.getElementById('homeProductsContainer');
+        const loadingIndicator = document.getElementById('homeSearchLoading');
+        let searchTimeout;
+
+        if (searchInput) {
+            // Search Input Listener
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                const query = this.value.trim();
+                const sort = document.getElementById('homeProductSort').value;
+
+                // Debounce search - wait 500ms after user stops typing
+                searchTimeout = setTimeout(() => {
+                    performSearch(query, sort);
+                }, 500);
+            });
+
+            // Sort Dropdown Listener
+            const sortSelect = document.getElementById('homeProductSort');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', function() {
+                    const query = searchInput.value.trim();
+                    performSearch(query, this.value);
+                });
+            }
+        }
+
+        function performSearch(query, sort = 'newest') {
+            // Show loading indicator
+            loadingIndicator.style.display = 'block';
+            console.log('Performing search for:', query, 'Sort:', sort);
+
+            fetch(`/search-products?q=${encodeURIComponent(query)}&sort=${sort}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Hide loading indicator
+                    loadingIndicator.style.display = 'none';
+                    console.log('Search results:', data);
+
+                    if (data.success) {
+                        renderProducts(data.products);
+                    }
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    loadingIndicator.style.display = 'none';
+                    productsContainer.innerHTML = '<div class="col-12"><p class="text-center" style="color: #dc3545;">Error loading products. Please try again.</p></div>';
+                });
+        }
+
+        function renderProducts(products) {
+            if (products.length === 0) {
+                productsContainer.innerHTML = '<div class="col-12"><p class="text-center">No products found matching your search.</p></div>';
+                return;
+            }
+
+            let html = '';
+            products.forEach(product => {
+                let stockHtml = '';
+                let linkAttr = `href="/product-detail/${product.id}"`;
+                let btnClass = 'theme-btn';
+                let cardStyle = '';
+
+                // Stock Logic
+                if (product.stock > 0) {
+                    stockHtml = `<h6 class="black" style="color: #000; font-weight: bold;">${product.stock} <br> in stock</h6>`;
+                } else {
+                    stockHtml = `<h6 class="text-danger out-of-stock-label">Out of<br>Stock</h6>`;
+                    linkAttr = 'href="javascript:void(0)"'; // Disable link
+                    btnClass += ' disabled'; // Bootstrap disabled class or custom
+                    cardStyle = 'opacity: 0.7; pointer-events: none;'; // Dim and disable click
+                }
+
+                html += `
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="product-card" style="${cardStyle}">
+                        <div class="product-card-image">
+                            <span class="price">
+                                <img src="{{ asset('images/yellow-shape.png') }}" alt="yellow-shape" class="yellow-shape">
+                                ${stockHtml}
+                            </span>
+                            <a ${linkAttr}>
+                                <img src="${product.image}" alt="${product.name}" class="product-img">
+                            </a>
+                        </div>
+                        <div class="product-card-text">
+                            <h6>${product.name}</h6>
+                            <a ${linkAttr} class="${btnClass}">$${parseFloat(product.price).toFixed(2)}
+                                <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            });
+
+            productsContainer.innerHTML = html;
+
+            // Refresh AOS to animate new elements
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            }
+        }
+    });
+</script>
 
 @endsection
