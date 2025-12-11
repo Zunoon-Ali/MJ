@@ -66,4 +66,62 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('q');
+        $sort = $request->input('sort', 'newest'); // Default sort
+
+        $products = Product::where('is_active', true);
+
+        if (!empty($query)) {
+            $products->where(function ($q) use ($query) {
+                $q->where('name', 'like', '%' . $query . '%')
+                    ->orWhere('description', 'like', '%' . $query . '%')
+                    ->orWhere('category', 'like', '%' . $query . '%')
+                    ->orWhere('price', 'like', '%' . $query . '%');
+            });
+        }
+
+        // Apply Sorting
+        switch ($sort) {
+            case 'price_high':
+                $products->orderBy('price', 'desc');
+                break;
+            case 'price_low':
+                $products->orderBy('price', 'asc');
+                break;
+            case 'name_asc':
+                $products->orderBy('name', 'asc');
+                break;
+            case 'name_desc':
+                $products->orderBy('name', 'desc');
+                break;
+            case 'oldest':
+                $products->oldest();
+                break;
+            case 'newest':
+            default:
+                $products->latest();
+                break;
+        }
+
+        $products = $products->get();
+
+
+        return response()->json([
+            'success' => true,
+            'products' => $products->map(function ($product) {
+                return [
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'description' => $product->description,
+                    'price' => $product->price,
+                    'stock' => $product->stock,
+                    'category' => $product->category,
+                    'image' => $product->image ? asset('storage/' . $product->image) : asset('images/product2.png'),
+                ];
+            })
+        ]);
+    }
 }

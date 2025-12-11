@@ -49,7 +49,6 @@ textarea {
     appearance: auto;
 }
 
-
 /***** Font Files *****/
 
 @font-face {
@@ -65,7 +64,6 @@ textarea {
     font-weight: 400;
     font-style: normal;
 }
-
 
 /***** Custom Classes *****/
 
@@ -118,7 +116,6 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-
 
 /* Headings */
 
@@ -181,7 +178,6 @@ p {
     color: #377f52;
 }
 
-
 /* Apply gradient animation base to all heading and paragraph tags */
 
 h1,
@@ -197,7 +193,6 @@ p {
     color: transparent;
     background-size: 0% 100%;
 }
-
 
 /* Menu */
 
@@ -297,7 +292,6 @@ section.header .nav.stroke {
     color: #000 !important;
 }
 
-
 /* Buttons Css Start*/
 
 .theme-btn {
@@ -359,9 +353,7 @@ section.header .nav.stroke {
     transform: translateX(-10px);
 }
 
-
 /* Buttons Css End*/
-
 
 /* Loader start */
 
@@ -424,9 +416,7 @@ img.loader {
     width: 10vw;
 }
 
-
 /* Loader end */
-
 
 /* Custom Scrollbar  */
 
@@ -442,22 +432,27 @@ img.loader {
 
 #style-6::-webkit-scrollbar-thumb {
     background-color: #6bc86f;
-    background-image: -webkit-linear-gradient( 45deg, #fcf9e8c4 25%, transparent 25%, transparent 50%, #fcf9e8c4 50%, #fcf9e8c4 75%, transparent 75%, transparent);
+    background-image: -webkit-linear-gradient(
+        45deg,
+        #fcf9e8c4 25%,
+        transparent 25%,
+        transparent 50%,
+        #fcf9e8c4 50%,
+        #fcf9e8c4 75%,
+        transparent 75%,
+        transparent
+    );
 }
 
 .scrollbar {
     overflow-y: scroll;
 }
 
-
 /* Custom Scrollbar  */
-
 
 /* Home Page start*/
 
-
 /* Header */
-
 
 /* .hdr_logo a img {
     object-fit: scale-down;
@@ -584,9 +579,7 @@ ul.hdr-right-list button i {
     font-size: 12px;
 }
 
-
 /* Header end*/
-
 
 /* Banner */
 
@@ -655,16 +648,14 @@ img.light-img1 {
     width: 470px;
 }
 
-
 /* Banner end*/
-
 
 /* section start */
 
 img.background-bg {
     left: 0;
     position: absolute;
-    top: -26%;
+    top: -17%;
     width: 100%;
     height: 132%;
     z-index: -1;
@@ -818,12 +809,9 @@ img.banner-card3-img {
     height: 75%;
 }
 
-
 /*end */
 
-
 /* section start */
-
 
 /* section.about_sec {} */
 
@@ -881,7 +869,6 @@ span.about-healz {
     bottom: 0;
 }
 
-
 /* Search Icon Button */
 
 .search-btn {
@@ -891,7 +878,6 @@ span.about-healz {
     font-size: 19px;
     color: #000000;
 }
-
 
 /* Fullscreen Overlay */
 
@@ -911,7 +897,6 @@ span.about-healz {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-
 /* Show overlay */
 
 .search-overlay.active {
@@ -919,7 +904,6 @@ span.about-healz {
     visibility: visible;
     z-index: 99999;
 }
-
 
 /* Search Box */
 
@@ -954,7 +938,6 @@ span.about-healz {
     margin-left: 10px;
 }
 
-
 /* Close button */
 
 .close-btn {
@@ -982,9 +965,7 @@ img.green-line1 {
     left: -100px;
 }
 
-
 /* section end */
-
 
 /* section start */
 
@@ -1006,7 +987,8 @@ img.yellow-shape {
     width: 100px;
 }
 
-h6.black {}
+h6.black {
+}
 
 span.price h6.black {
     left: 0;
@@ -1027,6 +1009,7 @@ span.price h6.black {
 
 .product-card-text h6 {
     text-align: center;
+    color: #377f52;
 }
 
 .product-card:hover .product-card-text h6 {
@@ -1066,7 +1049,11 @@ span.price h6.black {
 }
 
 .shine::before {
-    background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
     content: "";
     display: block;
     height: 100%;
@@ -1105,9 +1092,7 @@ span.price h6.black {
     font-size: 20px;
 }
 
-
 /* section end */
-
 
 /* section start */
 
@@ -1274,9 +1259,7 @@ section.about_sec.sec img.background-bg {
     object-position: top;
 }
 
-
 /* section end */
-
 
 /* section start */
 
@@ -1475,9 +1458,7 @@ section.gallery-sec img.background-bg {
     overflow: visible;
 }
 
-
 /* section end */
-
 
 /* section start */
 
@@ -1587,9 +1568,7 @@ img.comma-img {
     font-size: 13px;
 }
 
-
 /* section end */
-
 
 /* Footer */
 
@@ -1641,7 +1620,7 @@ footer h3 {
     transition-duration: 0.2s;
 }
 
-.quick-links>div {
+.quick-links > div {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -1887,7 +1866,6 @@ img.product-leaf2 {
     left: 400px;
 }
 
-
 /* Footer Ends */
 
 img.gallery-shape1-img {
@@ -1942,12 +1920,9 @@ img.store-shape2 {
     position: relative;
 }
 
-
 /* section start */
 
-
 /* section end */
-
 
 /* Home Page end*/
 
@@ -1980,7 +1955,6 @@ img.product-leaf2 {
     left: 10%;
 }
 
-
 /* .product_gallery-sec .background-bg{
     left: 0;
     position: absolute;
@@ -2012,7 +1986,6 @@ footer {
     position: absolute;
     transform: rotate(268deg);
 }
-
 
 /* @media (min-width: 800px) and (max-width: 1400px){
     body {
@@ -2080,10 +2053,9 @@ footer {
     z-index: 1;
 }
 
-
 /* Make sure your content is above the overlay */
 
-.slide2>* {
+.slide2 > * {
     position: relative;
     z-index: 2;
 }
@@ -2182,7 +2154,6 @@ footer {
     color: #a4e96b;
 }
 
-
 /* Container & layout adjustments */
 
 .contact_cf-container {
@@ -2202,7 +2173,6 @@ footer {
     transform: translateY(-5px);
 }
 
-
 /* Inputs */
 
 .contact_cf-input {
@@ -2220,7 +2190,6 @@ footer {
     box-shadow: 0 0 10px rgba(164, 233, 107, 0.5);
     outline: none;
 }
-
 
 /* Text styles */
 
@@ -2247,7 +2216,6 @@ footer {
     background-color: #8ed959;
     color: #111;
 }
-
 
 /* Responsive */
 
@@ -2284,9 +2252,7 @@ section.product-detail.sec {
     padding: 180px 0 200px 0;
 }
 
-
 /* ==== Product Detail Page ==== */
-
 
 /* ==== Product Info / Review Section ==== */
 
@@ -2439,7 +2405,6 @@ section.product-detail.sec {
     font-size: 14px;
 }
 
-
 /* Restore number input arrows in Chrome, Edge, Safari */
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -2450,7 +2415,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
 /* Optional: style the number input to match your theme */
 
 input[type="number"] {
@@ -2459,7 +2423,6 @@ input[type="number"] {
     border-radius: 8px;
     padding: 5px;
 }
-
 
 /* ==== Responsive ==== */
 
@@ -2576,14 +2539,12 @@ section.cart-page.sec.py-5.bg-light {
     padding-top: 54px;
 }
 
-
 /* Make tables scroll horizontally on smaller screens */
 
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
-
 
 /* Custom Scrollbar for better UX on desktop/tablets */
 
@@ -2601,13 +2562,11 @@ section.cart-page.sec.py-5.bg-light {
     background: #2a6140;
 }
 
-
 /* Ensure Product details don't wrap in their cell */
 
 .product-details-container {
     min-width: 250px;
 }
-
 
 /* Mobile Table Transformation (Stacking Rows) */
 
@@ -2684,4 +2643,17 @@ ul#menu {
 
 .product_sec .col-lg-3 {
     background-color: transparent;
+}
+
+/* Out of Stock Label */
+.out-of-stock-label {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: -75%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
 }

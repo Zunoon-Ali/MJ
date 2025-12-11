@@ -54,6 +54,9 @@ Route::get('/product', function () {
     return view('product', compact('products'));
 });
 
+// AJAX Product Search Route
+Route::get('/search-products', [ProductController::class, 'search'])->name('products.search');
+
 
 Route::get('/contact', function () {
     return view('contact');
