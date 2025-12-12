@@ -25,31 +25,32 @@
                     <span class="badge bg-success">{{ $product->stock }} in stock</span>
                 </div>
 
-                <form method="GET" action="{{ route('checkout') }}">
-                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                <form method="POST" action="{{ route('cart.add') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $product->id }}">
                     <div class="d-flex align-items-center mb-4">
                         <label class="me-2">Quantity:</label>
-                        <input type="number" name="quantity" value="1" min="1" max="{{ $product->stock }}" class="form-control w-25">
+                        <input type="number" name="quantity" id="product_quantity" value="1" min="1" max="{{ $product->stock }}" class="form-control w-25">
                     </div>
 
                     @auth
-                    <a href="{{ route('cart') }}" class="theme-btn me-3">
+                    <button type="submit" class="theme-btn me-3">
                         Add to Cart
                         <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
-                    </a>
+                    </button>
 
-                    <button type="submit" class="theme-btn alt-btn">
+                    <button type="button" class="theme-btn alt-btn" onclick="buyNow()">
                         Buy Now
                         <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                     </button>
                     @else
-                    <a href="{{ route('login') }}" class="theme-btn me-3">
-                        Add to Cart (Login Required)
+                    <a href="{{ route('login', ['redirect_to' => url()->current()]) }}" class="theme-btn me-3">
+                        Add to Cart
                         <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                     </a>
 
-                    <a href="{{ route('login') }}" class="theme-btn alt-btn">
-                        Buy Now (Login Required)
+                    <a href="{{ route('login', ['redirect_to' => url()->current()]) }}" class="theme-btn alt-btn">
+                        Buy Now
                         <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                     </a>
                     @endauth
@@ -58,6 +59,14 @@
         </div>
     </div>
 </section>
+
+<script>
+    function buyNow() {
+        var qty = document.getElementById('product_quantity').value;
+        var productId = "{{ $product->id }}";
+        window.location.href = "{{ route('checkout') }}?product_id=" + productId + "&quantity=" + qty;
+    }
+</script>
 
 <!-- ==== Product Review & Additional Info Section ==== -->
 <section class="product-info sec">

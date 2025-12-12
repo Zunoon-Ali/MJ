@@ -48,6 +48,10 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        if ($request->has('redirect_to') && $request->redirect_to) {
+            return redirect($request->redirect_to);
+        }
+
         // All new registrations go to user dashboard
         return redirect('/dashboard/user');
     }

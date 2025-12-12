@@ -17,8 +17,7 @@ body {
 /* Sidebar Styles */
 .sidebar {
     width: 250px; /* Fixed width instead of percentage */
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-        url("../images/banner.jpg") center/cover no-repeat;
+    background: url("../images/banner.jpg") center/cover no-repeat;
     color: white;
     padding: 20px;
     position: fixed; /* Fix the sidebar position */

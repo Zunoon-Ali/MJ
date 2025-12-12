@@ -273,7 +273,7 @@
                  <div class="product-search-container" style="max-width: 800px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
                      <div class="input-group" style="flex: 1; min-width: 300px;">
                          <input type="text" id="productPageSearch" class="form-control" placeholder="Search products by name, category, description, or price..." style="border-radius: 25px 0 0 25px; padding: 12px 20px; border: 2px solid #377f52;">
-                         <button class="btn" type="button" style="background: #377f52; color: white; border-radius: 0 25px 25px 0; padding: 12px 20px; border: 2px solid #377f52; border-left: none;">
+                         <button class="btn" type="button" style="background: #377f52; color: white; border-radius: 0 25px 25px 0; padding: 20px 18px; border: 2px solid #377f52; border-left: none; height:fit-content;">
                              <i class="fa-solid fa-search"></i>
                          </button>
                      </div>

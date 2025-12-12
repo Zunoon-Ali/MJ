@@ -7,13 +7,18 @@
     <div class="container">
         <h2 class="mb-4 text-center fw-bold" style="color:#377f52;">YOUR SHOPPING CART</h2>
 
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
+
         <div class="row">
             <!-- Cart Items (Main Table) -->
             <div class="col-lg-8 mb-4">
                 <div class="card shadow-sm">
-                    <!-- Apply table-responsive here to contain the wide table -->
                     <div class="card-body table-responsive">
-                        <table class="table align-middle mb-0">
+                        <table class="table align-middle mb-0" id="cart-table">
                             <thead class="table-light">
                                 <tr>
                                     <th class="product-details-container">Product</th>
@@ -24,54 +29,40 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Product Row Example 1 -->
-                                <tr>
+                                @if(session('cart'))
+                                @foreach(session('cart') as $id => $details)
+                                <tr data-id="{{ $id }}" data-stock="{{ $details['stock'] ?? 10 }}">
                                     <td data-label="Product">
                                         <div class="d-flex align-items-center product-details-container">
-                                            <img src="{{ asset('images/product2.png') }}" onerror="this.onerror=null; this.src='https://placehold.co/70x70/377f52/ffffff?text=Oil';" alt="Herbal Hair Oil" width="70" class="rounded me-3">
+                                            @if(isset($details['image']))
+                                            <img src="{{ asset('storage/' . $details['image']) }}" onerror="this.onerror=null; this.src='https://placehold.co/70x70/377f52/ffffff?text=No+Image';" alt="{{ $details['name'] }}" width="70" class="rounded me-3">
+                                            @else
+                                            <img src="https://placehold.co/70x70/377f52/ffffff?text=No+Image" alt="{{ $details['name'] }}" width="70" class="rounded me-3">
+                                            @endif
                                             <div>
-                                                <h6 class="mb-1">Herbal Hair Oil (200ml)</h6>
-                                                <small class="text-muted">Nourishing Formula</small>
+                                                <h6 class="mb-1">{{ $details['name'] }}</h6>
                                             </div>
                                         </div>
                                     </td>
-                                    <td data-label="Price" class="text-center">$39.99</td>
+                                    <td data-label="Price" class="text-center">${{ $details['price'] }}</td>
                                     <td data-label="Quantity" class="text-center">
                                         <div class="d-flex justify-content-center align-items-center">
-                                            <button class="btn btn-outline-secondary btn-sm quantity-btn" type="button">-</button>
-                                            <input type="number" class="form-control form-control-sm text-center mx-1" value="1" min="1" style="width:50px;">
-                                            <button class="btn btn-outline-secondary btn-sm quantity-btn" type="button">+</button>
+                                            <button class="btn btn-outline-secondary btn-sm update-cart-btn" data-action="decrease" type="button">-</button>
+                                            <input type="number" class="form-control form-control-sm text-center mx-1 quantity-input" value="{{ $details['quantity'] }}" min="1" max="{{ $details['stock'] ?? 10 }}" style="width:50px;">
+                                            <button class="btn btn-outline-secondary btn-sm update-cart-btn" data-action="increase" type="button">+</button>
                                         </div>
                                     </td>
-                                    <td data-label="Subtotal" class="text-end">$39.99</td>
+                                    <td data-label="Subtotal" class="text-end subtotal">${{ $details['price'] * $details['quantity'] }}</td>
                                     <td data-label="Remove" class="text-end">
-                                        <button class="btn btn-sm btn-outline-danger" type="button" title="Remove Item"><i class="fa fa-times"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger remove-from-cart" type="button" title="Remove Item"><i class="fa fa-times"></i></button>
                                     </td>
                                 </tr>
-                                <!-- Product Row Example 2 -->
+                                @endforeach
+                                @else
                                 <tr>
-                                    <td data-label="Product">
-                                        <div class="d-flex align-items-center product-details-container">
-                                            <img src="{{ asset('images/product3.png') }}" onerror="this.onerror=null; this.src='https://placehold.co/70x70/377f52/ffffff?text=Shampoo';" alt="Volumizing Shampoo" width="70" class="rounded me-3">
-                                            <div>
-                                                <h6 class="mb-1">Volumizing Shampoo</h6>
-                                                <small class="text-muted">Large 500ml bottle</small>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-label="Price" class="text-center">$24.00</td>
-                                    <td data-label="Quantity" class="text-center">
-                                        <div class="d-flex justify-content-center align-items-center">
-                                            <button class="btn btn-outline-secondary btn-sm quantity-btn" type="button">-</button>
-                                            <input type="number" class="form-control form-control-sm text-center mx-1" value="2" min="1" style="width:50px;">
-                                            <button class="btn btn-outline-secondary btn-sm quantity-btn" type="button">+</button>
-                                        </div>
-                                    </td>
-                                    <td data-label="Subtotal" class="text-end">$48.00</td>
-                                    <td data-label="Remove" class="text-end">
-                                        <button class="btn btn-sm btn-outline-danger" type="button" title="Remove Item"><i class="fa fa-times"></i></button>
-                                    </td>
+                                    <td colspan="5" class="text-center">Your cart is empty</td>
                                 </tr>
+                                @endif
                             </tbody>
                         </table>
                     </div>
@@ -82,33 +73,23 @@
                 </a>
             </div>
 
-            <!-- Order Summary (Fixed the content structure here) -->
+            <!-- Order Summary -->
             <div class="col-lg-4">
                 <div class="card shadow-sm">
                     <div class="card-header bg-white fw-bold border-bottom">
                         Order Summary
                     </div>
                     <div class="card-body">
-                        {{-- This section is now a clean list of totals, resolving the mobile wrapping issue --}}
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                Cart Subtotal (3 items): <span>$87.99</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                Shipping: <span>$7.50</span>
-                            </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0 fw-bold">
-                                Order Total: <span class="fs-5" style="color:#377f52;">$95.49</span>
+                                Order Total: <span class="fs-5" style="color:#377f52;" id="cart-total">${{ $total ?? 0 }}</span>
                             </li>
                         </ul>
 
                         <div class="d-grid mt-4">
-                            <button class="btn btn-lg text-white" type="submit" style="background-color:#377f52; border-color:#377f52;">
-                                <a href="{{ url('checkout') }}" class="text-white">
-
-                                    Proceed to Checkout
-                                </a>
-                            </button>
+                            <a href="{{ route('checkout') }}" class="btn btn-lg text-white" style="background-color:#377f52; border-color:#377f52;">
+                                Proceed to Checkout
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -118,22 +99,95 @@
 </section>
 @endsection
 
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".update-cart-btn").click(function(e) {
+            e.preventDefault();
+            var ele = $(this);
+            var row = ele.closest("tr");
+            var input = row.find(".quantity-input");
+            var quantity = parseInt(input.val());
+            var stock = parseInt(row.data("stock"));
+            var action = ele.data("action");
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.quantity-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const input = e.target.closest('.d-flex').querySelector('input[type="number"]');
-                let value = parseInt(input.value);
-                if (e.target.textContent === '+') {
-                    value++;
-                } else if (e.target.textContent === '-' && value > 1) {
-                    value--;
+            if (action === "increase") {
+                if (quantity < stock) {
+                    quantity++;
+                } else {
+                    alert("Sorry, only " + stock + " items left in stock!");
+                    return; // Stop execution
                 }
-                input.value = value;
-                // In a real app, you would now trigger an AJAX update for the cart.
-                console.log(`Quantity updated for product to: ${value}`);
-            });
+            } else if (action === "decrease" && quantity > 1) {
+                quantity--;
+            }
+
+            input.val(quantity);
+            // Trigger update immediately
+            updateCart(row.data("id"), quantity);
         });
+
+        $(".quantity-input").change(function(e) {
+            e.preventDefault();
+            var ele = $(this);
+            var row = ele.closest("tr");
+            var quantity = parseInt(ele.val());
+            var stock = parseInt(row.data("stock"));
+
+            if (quantity < 1) {
+                quantity = 1;
+                ele.val(1);
+            }
+            if (quantity > stock) {
+                alert("Sorry, only " + stock + " items left in stock!");
+                quantity = stock;
+                ele.val(stock);
+            }
+            updateCart(row.data("id"), quantity);
+        });
+
+        $(".remove-from-cart").click(function(e) {
+            e.preventDefault();
+            var ele = $(this);
+            var row = ele.closest("tr");
+
+            if (confirm("Are you sure want to remove?")) {
+                $.ajax({
+                    url: '{{ route("cart.remove") }}',
+                    method: "DELETE",
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        id: row.data("id")
+                    },
+                    success: function(response) {
+                        window.location.reload();
+                    },
+                    error: function(xhr) {
+                        console.error(xhr.responseText);
+                        alert('Error removing item. Please try again.');
+                    }
+                });
+            }
+        });
+
+        function updateCart(id, quantity) {
+            $.ajax({
+                url: '{{ route("cart.update") }}',
+                method: "PATCH",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: id,
+                    quantity: quantity
+                },
+                success: function(response) {
+                    window.location.reload();
+                },
+                error: function(xhr) {
+                    console.error(xhr.responseText);
+                    // alert('Error updating cart. Please try again.'); 
+                }
+            });
+        }
     });
 </script>
+@endsection

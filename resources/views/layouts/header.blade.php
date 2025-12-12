@@ -23,11 +23,11 @@
       <div class="col-lg-3 col-md-4 col-sm-5">
         <div class="hdr-right-btn hdr-right-btn1">
           <ul class="hdr-right-list">
-            <li>
+            <!-- <li>
               <button class="search-btn" onclick="openSearch()">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </li>
+            </li> -->
             <!-- ✅ Account Page -->
             <li>
               <a href="{{ route('account') }}">
@@ -40,9 +40,22 @@
                 <i class="fa-solid fa-cart-shopping"></i>
               </a>
             </li>
-            <!-- ✅ Auth Buttons -->
             @auth
-            @if(Auth::user()->role !== 'admin')
+            <!-- Logged In: Show User Icon -->
+            @if(Auth::user()->role === 'admin')
+            <li>
+              <a href="{{ url('/dashboard/admin') }}" title="Admin Dashboard">
+                <i class="fa-solid fa-user-shield"></i>
+              </a>
+            </li>
+            @else
+            <li>
+              <a href="{{ url('/dashboard/user') }}" title="User Dashboard">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+            </li>
+            @endif
+
             <li>
               <form id="logout-form-desktop" action="{{ route('logout') }}" method="POST" style="display: inline;">
                 @csrf
@@ -51,8 +64,8 @@
                 </button>
               </form>
             </li>
-            @endif
             @else
+            <!-- Guest: Show Login Icon -->
             <li>
               <a href="{{ route('login') }}" title="Login">
                 <i class="fa-solid fa-right-to-bracket"></i>
@@ -89,11 +102,11 @@
       <!-- ✅ Updated Right Buttons -->
       <div class="hdr-right-btn hdr-right-btn2">
         <ul class="hdr-right-list">
-          <li>
+          <!-- <li>
             <button class="search-btn" onclick="openSearch()">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-          </li>
+          </li> -->
           <li>
             <a href="{{ route('account') }}">
               <i class="fa-solid fa-user"></i>
@@ -105,17 +118,31 @@
             </a>
           </li>
           @auth
-          @if(Auth::user()->role !== 'admin')
+          <!-- Logged In: Show User Icon -->
+          @if(Auth::user()->role === 'admin')
           <li>
-            <form id="logout-form-mobile" action="{{ route('logout') }}" method="POST" style="display: inline;">
+            <a href="{{ url('/dashboard/admin') }}" title="Admin Dashboard">
+              <i class="fa-solid fa-user-shield"></i>
+            </a>
+          </li>
+          @else
+          <li>
+            <a href="{{ url('/dashboard/user') }}" title="User Dashboard">
+              <i class="fa-solid fa-circle-user"></i>
+            </a>
+          </li>
+          @endif
+
+          <li>
+            <form id="logout-form-desktop" action="{{ route('logout') }}" method="POST" style="display: inline;">
               @csrf
               <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0;">
                 <i class="fa-solid fa-right-from-bracket" title="Logout"></i>
               </button>
             </form>
           </li>
-          @endif
           @else
+          <!-- Guest: Show Login Icon -->
           <li>
             <a href="{{ route('login') }}" title="Login">
               <i class="fa-solid fa-right-to-bracket"></i>
@@ -139,13 +166,13 @@
 </section>
 
 <!-- ===================== SEARCH OVERLAY ===================== -->
-<div class="search-overlay" id="searchOverlay">
+<!-- <div class="search-overlay" id="searchOverlay">
   <span class="close-btn" onclick="closeSearch()">✖</span>
   <div class="search-box">
     <input type="text" class="search-input" placeholder="Search..." />
     <button class="send-btn">Send</button>
   </div>
-</div>
+</div> -->
 
 <!-- ===================== HEADER JS ===================== -->
 <script>

@@ -28,12 +28,16 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-         // ROLE-BASED REDIRECT
-    if (Auth::user()->is_admin == 1) {
-        return redirect('/dashboard/admin'); // direct URL
-    }
+        if ($request->has('redirect_to') && $request->redirect_to) {
+            return redirect($request->redirect_to);
+        }
 
-    return redirect('/dashboard/user'); // direct URL
+        // ROLE-BASED REDIRECT
+        if (Auth::user()->is_admin == 1) {
+            return redirect('/dashboard/admin'); // direct URL
+        }
+
+        return redirect('/dashboard/user'); // direct URL
     }
 
     /**

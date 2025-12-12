@@ -50,7 +50,7 @@ class OrderController extends Controller
     // Public: Store order from checkout
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $rules = [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -59,17 +59,58 @@ class OrderController extends Controller
             'city' => 'required|string|max:100',
             'postal_code' => 'required|string|max:20',
             'payment_method' => 'required|string',
-            'product_id' => 'required|exists:products,id',
-            'quantity' => 'required|integer|min:1',
-        ]);
+        ];
+
+        // If product_id is provided, it's a 'Buy Now' action
+        if ($request->has('product_id') && $request->product_id != null) {
+            $rules['product_id'] = 'required|exists:products,id';
+            $rules['quantity'] = 'required|integer|min:1';
+        } else {
+            // Otherwise, ensure cart is not empty
+            if (!session('cart') || empty(session('cart'))) {
+                return back()->withErrors(['error' => 'Your cart is empty.']);
+            }
+        }
+
+        $validated = $request->validate($rules);
 
         DB::beginTransaction();
         try {
-            // Get product
-            $product = Product::findOrFail($validated['product_id']);
+            $subtotal = 0;
+            $orderItems = [];
 
-            // Calculate totals
-            $subtotal = $product->price * $validated['quantity'];
+            if ($request->has('product_id') && $request->product_id != null) {
+                // Single Product Checkout
+                $product = Product::findOrFail($validated['product_id']);
+                $qty = $validated['quantity'];
+
+                $itemSubtotal = $product->price * $qty;
+                $subtotal += $itemSubtotal;
+
+                $orderItems[] = [
+                    'product_id' => $product->id,
+                    'product_name' => $product->name,
+                    'price' => $product->price,
+                    'quantity' => $qty,
+                    'subtotal' => $itemSubtotal,
+                ];
+            } else {
+                // Cart Checkout
+                $cart = session('cart');
+                foreach ($cart as $id => $details) {
+                    $itemSubtotal = $details['price'] * $details['quantity'];
+                    $subtotal += $itemSubtotal;
+
+                    $orderItems[] = [
+                        'product_id' => $id,
+                        'product_name' => $details['name'], // Ensure these keys match what you store in session
+                        'price' => $details['price'],
+                        'quantity' => $details['quantity'],
+                        'subtotal' => $itemSubtotal,
+                    ];
+                }
+            }
+
             $shippingCost = 5.00;
             $total = $subtotal + $shippingCost;
 
@@ -90,15 +131,22 @@ class OrderController extends Controller
                 'status' => 'pending',
             ]);
 
-            // Create order item
-            OrderItem::create([
-                'order_id' => $order->id,
-                'product_id' => $product->id,
-                'product_name' => $product->name,
-                'price' => $product->price,
-                'quantity' => $validated['quantity'],
-                'subtotal' => $subtotal,
-            ]);
+            // Create order items
+            foreach ($orderItems as $item) {
+                OrderItem::create([
+                    'order_id' => $order->id,
+                    'product_id' => $item['product_id'],
+                    'product_name' => $item['product_name'],
+                    'price' => $item['price'],
+                    'quantity' => $item['quantity'],
+                    'subtotal' => $item['subtotal'],
+                ]);
+            }
+
+            // Clear cart if it was a cart checkout (not a 'Buy Now' with specific product_id)
+            if (empty($request->product_id)) {
+                session()->forget('cart');
+            }
 
             DB::commit();
 
@@ -106,7 +154,7 @@ class OrderController extends Controller
                 ->with('success', 'Order placed successfully!');
         } catch (\Exception $e) {
             DB::rollBack();
-            return back()->withErrors(['error' => 'Failed to place order. Please try again.'])->withInput();
+            return back()->withErrors(['error' => 'Failed to place order: ' . $e->getMessage()])->withInput();
         }
     }
 

@@ -121,28 +121,54 @@
                             <h5 class="fw-bold mb-4">Order Summary</h5>
 
                             @php
-                            $product = App\Models\Product::find(request('product_id'));
-                            $quantity = request('quantity', 1);
-                            $subtotal = $product ? $product->price * $quantity : 0;
+                            $subtotal = 0;
                             $shipping = 5.00;
+                            $cartItems = [];
+
+                            if(request('product_id')) {
+                            // Direct Buy Now
+                            $product = App\Models\Product::find(request('product_id'));
+                            $qty = request('quantity', 1);
+                            if($product) {
+                            $subtotal = $product->price * $qty;
+                            $cartItems[] = [
+                            'id' => $product->id,
+                            'name' => $product->name,
+                            'price' => $product->price,
+                            'quantity' => $qty,
+                            'image' => $product->image
+                            ];
+                            }
+                            } else {
+                            // From Session Cart
+                            if(session('cart')) {
+                            foreach(session('cart') as $id => $details) {
+                            $subtotal += $details['price'] * $details['quantity'];
+                            $cartItems[] = $details; // Assuming structure matches (or adapt if needed)
+                            }
+                            }
+                            }
+
                             $total = $subtotal + $shipping;
                             @endphp
 
-                            @if($product)
+                            @if(count($cartItems) > 0)
+                            @foreach($cartItems as $item)
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <div class="d-flex align-items-center">
-                                    @if($product->image)
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" width="60" class="rounded me-3">
+                                    @if(isset($item['image']))
+                                    <img src="{{ asset('storage/' . $item['image']) }}" onerror="this.onerror=null; this.src='https://placehold.co/70x70/377f52/ffffff?text=Product';" alt="{{ $item['name'] }}" width="60" class="rounded me-3">
                                     @else
-                                    <img src="{{ asset('images/product2.png') }}" alt="{{ $product->name }}" width="60" class="rounded me-3">
+                                    <img src="{{ asset('images/product2.png') }}" alt="{{ $item['name'] }}" width="60" class="rounded me-3">
                                     @endif
                                     <div>
-                                        <h6 class="mb-0">{{ $product->name }}</h6>
-                                        <small class="text-muted">Qty: {{ $quantity }}</small>
+                                        <h6 class="mb-0">{{ $item['name'] }}</h6>
+                                        <small class="text-muted">Qty: {{ $item['quantity'] }}</small>
                                     </div>
                                 </div>
-                                <span>${{ number_format($product->price, 2) }}</span>
+                                <span>${{ number_format($item['price'] * $item['quantity'], 2) }}</span>
                             </div>
+                            @endforeach
 
                             <hr>
 

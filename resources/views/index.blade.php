@@ -407,7 +407,7 @@
                         View More Products <span class="leaf-icon"><i class="fa-solid fa-leaf"></i></span>
                     </a>
                 </div>
-            </div>
+            </div> 
         </div>
 
         <img src="{{ asset('images/product-leaf2.png') }}" alt="product-leaf" class="product-leaf2">

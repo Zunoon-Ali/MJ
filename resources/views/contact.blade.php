@@ -4,7 +4,7 @@
 
  @section('content')
 
-<!-- <div id="loader">
+ <!-- <div id="loader">
     <div class="loader-box">
         <div class="first loader-column">
             <span>
@@ -210,10 +210,10 @@
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
                          <div class="contact_blur_box p-4 text-white">
-                             <p class="contact_tagline mb-2 text-white">Get In Touch</p>
-                             <h2 class="mb-3 text-white">We’re Here to Help You</h2>
+                             <p class="contact_tagline mb-2 text-white">{{ $contact->slider1_tagline ?? 'Get In Touch' }}</p>
+                             <h2 class="mb-3 text-white">{{ $contact->slider1_h2 ?? "We're Here to Help You" }}</h2>
                              <p class="text-white">
-                                 Reach out to us for any inquiries, feedback, or support. Our team is always ready to assist you with care and professionalism.
+                                 {{ $contact->slider1_p ?? 'Reach out to us for any inquiries, feedback, or support. Our team is always ready to assist you with care and professionalism.' }}
                              </p>
                          </div>
                      </div>
@@ -227,10 +227,10 @@
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
                          <div class="contact_blur_box p-4 text-white">
-                             <p class="contact_tagline mb-2 text-white">Connect With Us</p>
-                             <h2 class="mb-3 text-white">Your Questions, Our Answers</h2>
+                             <p class="contact_tagline mb-2 text-white">{{ $contact->slider2_tagline ?? 'Connect With Us' }}</p>
+                             <h2 class="mb-3 text-white">{{ $contact->slider2_h2 ?? 'Your Questions, Our Answers' }}</h2>
                              <p class="text-white">
-                                 Whether it’s a product query or partnership opportunity, we’d love to hear from you and make things easier.
+                                 {{ $contact->slider2_p ?? "Whether it's a product query or partnership opportunity, we'd love to hear from you and make things easier." }}
                              </p>
                          </div>
                      </div>
@@ -244,10 +244,10 @@
                  <div class="row justify-content-start align-items-center min-vh-100">
                      <div class="col-lg-6 col-md-8 col-sm-12 text-center text-md-start">
                          <div class="contact_blur_box p-4 text-white">
-                             <p class="contact_tagline mb-2 text-white">Stay Connected</p>
-                             <h2 class="mb-3 text-white">Let’s Build a Stronger Bond</h2>
+                             <p class="contact_tagline mb-2 text-white">{{ $contact->slider3_tagline ?? 'Stay Connected' }}</p>
+                             <h2 class="mb-3 text-white">{{ $contact->slider3_h2 ?? "Let's Build a Stronger Bond" }}</h2>
                              <p class="text-white">
-                                 Join our community and stay updated with our latest news, offers, and natural wellness insights.
+                                 {{ $contact->slider3_p ?? 'Join our community and stay updated with our latest news, offers, and natural wellness insights.' }}
                              </p>
                          </div>
                      </div>
@@ -269,69 +269,70 @@
  <!-- banner end -->
 
  <!-- about_sec start -->
-<section class="about_sec sec position-relative">
-    <span class="contact_cf-helz">Verdian Roots</span>
+ <section class="about_sec sec position-relative">
+     <span class="contact_cf-helz">Verdian Roots</span>
 
-    <!-- Keep same background -->
-    <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />
+     <!-- Keep same background -->
+     <img src="{{ asset('images/about-bg.png') }}" alt="about-bg" class="background-bg" />
 
-    <div class="container contact_cf-container">
-        <div class="row justify-content-center align-items-center contact_cf-row">
+     <div class="container contact_cf-container">
+         <div class="row justify-content-center align-items-center contact_cf-row">
 
-            <!-- Left Text Section -->
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 contact_cf-col">
-                <div class="contact_cf-text">
-                    <img src="{{ asset('images/green-line.png') }}" alt="green-line" class="green-line contact_cf-green-line">
+             <!-- Left Text Section -->
+             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 contact_cf-col">
+                 <div class="contact_cf-text">
+                     <img src="{{ asset('images/green-line.png') }}" alt="green-line" class="green-line contact_cf-green-line">
                      <img src="{{ asset('images/green-line1.png') }}" alt="green-line1" class="green-line1 contact_cf-green-line1">
 
-                    <p class="black contact_cf-tagline">Get in Touch with Us</p>
-                    <h2 class="contact_cf-h2 mb-3">We’d Love to Hear From You</h2>
-                    <p class="contact_cf-p mb-4">
-                        Whether you have a question about our products, need support, or just want to connect,
-                        we’re here to listen and assist you. Fill out the form and our team will respond shortly.
-                    </p>
+                     <p class="black contact_cf-tagline">{{ $contact->contact_tagline ?? 'Get in Touch with Us' }}</p>
+                     <h2 class="contact_cf-h2 mb-3">{{ $contact->contact_h2 ?? "We'd Love to Hear From You" }}</h2>
+                     <p class="contact_cf-p mb-4">
+                         {{ $contact->contact_p ?? "Whether you have a question about our products, need support, or just want to connect, we're here to listen and assist you. Fill out the form and our team will respond shortly." }}
+                     </p>
 
-                    <a href="#" class="theme-btn contact_cf-theme-btn" data-aos="fade-up">
-                        Learn More
-                        <span class="leaf-icon">
-                            <i class="fa-solid fa-leaf"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
+                     <a href="#" class="theme-btn contact_cf-theme-btn" data-aos="fade-up">
+                         {{ $contact->contact_link ?? 'Learn More' }}
+                         <span class="leaf-icon">
+                             <i class="fa-solid fa-leaf"></i>
+                         </span>
+                     </a>
+                 </div>
+             </div>
 
-            <!-- Right Form Section -->
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 contact_cf-col-form">
-                <div class="contact_cf-form-box p-4 shadow-lg">
-                    <form class="contact_cf-form" action="#" method="post">
-                        <div class="mb-3">
-                            <label for="contact_cf-name" class="form-label text-[#337a4e]">Name</label>
-                            <input type="text" id="contact_cf-name" name="name" class="form-control contact_cf-input" placeholder="Enter your name" required>
-                        </div>
+             <!-- Right Form Section -->
+             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 contact_cf-col-form">
+                 <div class="contact_cf-form-box p-4 shadow-lg">
 
-                        <div class="mb-3">
-                            <label for="contact_cf-email" class="form-label text-[#337a4e]">Email</label>
-                            <input type="email" id="contact_cf-email" name="email" class="form-control contact_cf-input" placeholder="Enter your email" required>
-                        </div>
+                     <form class="contact_cf-form" action="{{ route('contact.submit') }}" method="POST">
+                         @csrf
+                         <div class="mb-3">
+                             <label for="contact_cf-name" class="form-label text-[#337a4e]">Name</label>
+                             <input type="text" id="contact_cf-name" name="name" class="form-control contact_cf-input" placeholder="Enter your name" value="{{ old('name') }}" required>
+                         </div>
 
-                        <div class="mb-3">
-                            <label for="contact_cf-message" class="form-label text-[#337a4e]">Message</label>
-                            <textarea id="contact_cf-message" name="message" rows="4" class="form-control contact_cf-input" placeholder="Write your message" required></textarea>
-                        </div>
+                         <div class="mb-3">
+                             <label for="contact_cf-email" class="form-label text-[#337a4e]">Email</label>
+                             <input type="email" id="contact_cf-email" name="email" class="form-control contact_cf-input" placeholder="Enter your email" value="{{ old('email') }}" required>
+                         </div>
 
-                        <button type="submit" class="theme-btn w-100 contact_cf-submit-btn">
-                            Send Message
-                            <span class="leaf-icon">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </span>
-                        </button>
-                    </form>
-                </div>
-            </div>
+                         <div class="mb-3">
+                             <label for="contact_cf-message" class="form-label text-[#337a4e]">Message</label>
+                             <textarea id="contact_cf-message" name="message" rows="4" class="form-control contact_cf-input" placeholder="Write your message" required>{{ old('message') }}</textarea>
+                         </div>
 
-        </div>
-    </div>
-</section>
+                         <button type="submit" class="theme-btn w-100 contact_cf-submit-btn">
+                             Send Message
+                             <span class="leaf-icon">
+                                 <i class="fa-solid fa-paper-plane"></i>
+                             </span>
+                         </button>
+                     </form>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+ </section>
 
  <!-- about_sec end -->
 
@@ -353,85 +354,134 @@
 
  <!-- section start -->
  <section class="testimonial-sec sec">
-        <img src="{{ asset('images/testi-bg.png') }}" alt="about-bg" class="background-bg" />
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="testimonial-heading text-center">
-                        <h2>
-                            What People Say
-                        </h2>
-                        <p class="auto">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                        </p>
-                    </div>
-                </div>
-            </div>
+     <img src="{{ asset('images/testi-bg.png') }}" alt="about-bg" class="background-bg" />
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="testimonial-heading text-center">
+                     <h2>
+                         {{ $contact->testi_h2 ?? 'What People Say' }}
+                     </h2>
+                     <p class="auto">
+                         {{ $contact->testi_p ?? 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.' }}
+                     </p>
+                 </div>
+             </div>
+         </div>
 
-            <div class="testi-main-box">
-                <img src="{{ asset('images/lines.png') }}" alt="lines-img" class="lines-img">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testi-box">
-                            <div class="testi-image">
-                                <img src="{{ asset('images/user1.jpg') }}" alt="user-img" class="user-img" />
-                                <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
-                            </div>
-                            <div class="testi-text">
-                                <h6>Kathy h.</h6>
-                                <p>
-                                    "After struggling with runner’s knee, I decided to give Leaf Healz pain salve a
-                                    try, and it worked wonders. Shortly
-                                    after using it, the pain vanished. I’m really impressed with Leaf Healz's pain
-                                    salve."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+         <div class="testi-main-box">
+             <img src="{{ asset('images/lines.png') }}" alt="lines-img" class="lines-img">
+             <div class="row">
+                 <div class="col-lg-4">
+                     <div class="testi-box">
+                         <div class="testi-image">
+                             <img src="{{ asset('images/user1.jpg') }}" alt="user-img" class="user-img" />
+                             <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
+                         </div>
+                         <div class="testi-text">
+                             <h6>Kathy h.</h6>
+                             <p>
+                                 "After struggling with runner’s knee, I decided to give Leaf Healz pain salve a
+                                 try, and it worked wonders. Shortly
+                                 after using it, the pain vanished. I’m really impressed with Leaf Healz's pain
+                                 salve."
+                             </p>
+                         </div>
+                     </div>
+                 </div>
 
-                    <div class="col-lg-4">
-                        <div class="testi-box">
-                            <div class="testi-image">
-                                <img src="{{ asset('images/user2.jpg') }}" alt="user-img" class="user-img" />
-                                <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
-                            </div>
-                            <div class="testi-text">
-                                <h6>Anne J.</h6>
-                                <p>
-                                    "I’ve been dealing with a stressful job lately, and I was searching for a natural
-                                    way to relax without resorting to
-                                    medication. I decided to try Leaf Healz tincture, and it really did the trick. It
-                                    helped me unwind and feel much calmer."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                 <div class="col-lg-4">
+                     <div class="testi-box">
+                         <div class="testi-image">
+                             <img src="{{ asset('images/user2.jpg') }}" alt="user-img" class="user-img" />
+                             <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
+                         </div>
+                         <div class="testi-text">
+                             <h6>Anne J.</h6>
+                             <p>
+                                 "I’ve been dealing with a stressful job lately, and I was searching for a natural
+                                 way to relax without resorting to
+                                 medication. I decided to try Leaf Healz tincture, and it really did the trick. It
+                                 helped me unwind and feel much calmer."
+                             </p>
+                         </div>
+                     </div>
+                 </div>
 
-                    <div class="col-lg-4">
-                        <div class="testi-box right">
-                            <div class="testi-image">
-                                <img src="{{ asset('images/user3.jpg') }}" alt="user-img" class="user-img" />
-                                <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
-                            </div>
-                            <div class="testi-text">
-                                <h6>Harold s.</h6>
-                                <p>
-                                    "After struggling with runner’s knee, I decided to give Leaf Healz pain salve a
-                                    try, and it worked wonders. Shortly
-                                    after using it, the pain vanished. I’m really impressed with Leaf Healz's pain
-                                    salve."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="{{ asset('images/lines1.png') }}" alt="lines-img" class="lines-img1">
-            </div>
-        </div>
-    </section>
+                 <div class="col-lg-4">
+                     <div class="testi-box right">
+                         <div class="testi-image">
+                             <img src="{{ asset('images/user3.jpg') }}" alt="user-img" class="user-img" />
+                             <img src="{{ asset('images/comma.png') }}" alt="comma-img" class="comma-img" />
+                         </div>
+                         <div class="testi-text">
+                             <h6>Harold s.</h6>
+                             <p>
+                                 "After struggling with runner’s knee, I decided to give Leaf Healz pain salve a
+                                 try, and it worked wonders. Shortly
+                                 after using it, the pain vanished. I’m really impressed with Leaf Healz's pain
+                                 salve."
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <img src="{{ asset('images/lines1.png') }}" alt="lines-img" class="lines-img1">
+         </div>
+     </div>
+ </section>
 
 
+ <!-- Toast Notification Container -->
+ <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+     @if(session('success'))
+     <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+         <div class="d-flex">
+             <div class="toast-body">
+                 <i class="fa-solid fa-check-circle me-2"></i>{{ session('success') }}
+             </div>
+             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+         </div>
+     </div>
+     @endif
+
+     @if($errors->any())
+     <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+         <div class="d-flex">
+             <div class="toast-body">
+                 <i class="fa-solid fa-exclamation-circle me-2"></i>
+                 @foreach($errors->all() as $error)
+                 {{ $error }}<br>
+                 @endforeach
+             </div>
+             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+         </div>
+     </div>
+     @endif
+ </div>
+ @endsection
+
+ @section('scripts')
+ <script>
+     // Show toast notifications
+     document.addEventListener('DOMContentLoaded', function() {
+         var successToastEl = document.getElementById('successToast');
+         if (successToastEl) {
+             var successToast = new bootstrap.Toast(successToastEl, {
+                 autohide: true,
+                 delay: 5000
+             });
+             successToast.show();
+         }
+
+         var errorToastEl = document.getElementById('errorToast');
+         if (errorToastEl) {
+             var errorToast = new bootstrap.Toast(errorToastEl, {
+                 autohide: true,
+                 delay: 7000
+             });
+             errorToast.show();
+         }
+     });
+ </script>
  @endsection

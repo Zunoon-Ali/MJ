@@ -14,6 +14,11 @@ class ProductController extends Controller
         return view('dashboard.admin.products.index', compact('products'));
     }
 
+    public function create()
+    {
+        return view('dashboard.admin.products.create');
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -32,6 +37,11 @@ class ProductController extends Controller
 
         Product::create($validated);
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
+    }
+
+    public function edit(Product $product)
+    {
+        return view('dashboard.admin.products.edit', compact('product'));
     }
 
     public function update(Request $request, Product $product)

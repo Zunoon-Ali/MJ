@@ -20,20 +20,20 @@
 
                         <!-- Logic to determine active tab based on validation errors -->
                         @php
-                            // Check for validation errors specific to the Register form
-                            $hasRegisterErrors = $errors->has('first_name') || $errors->has('last_name') || $errors->has('password_confirmation');
-                            
-                            // If there are register errors, $isRegisterActive is true, otherwise $isLoginActive is true
-                            $isRegisterActive = $hasRegisterErrors;
-                            $isLoginActive = !$hasRegisterErrors;
+                        // Check for validation errors specific to the Register form
+                        $hasRegisterErrors = $errors->has('first_name') || $errors->has('last_name') || $errors->has('password_confirmation');
+
+                        // If there are register errors, $isRegisterActive is true, otherwise $isLoginActive is true
+                        $isRegisterActive = $hasRegisterErrors;
+                        $isLoginActive = !$hasRegisterErrors;
                         @endphp
-                        
+
                         <!-- Session Status / Success Messages -->
                         @if (session('status'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('status') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('status') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                         @endif
 
                         <!-- Tabs -->
@@ -54,27 +54,29 @@
 
                         <!-- Tab Content -->
                         <div class="tab-content" id="accountTabsContent">
-                            
+
                             {{-- LOGIN TAB START --}}
                             <div class="tab-pane fade {{ $isLoginActive ? 'show active' : '' }}" id="login" role="tabpanel">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
+                                    <!-- Capture redirect query param if present -->
+                                    <input type="hidden" name="redirect_to" value="{{ request('redirect_to') }}">
 
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email Address</label>
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" 
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                             name="email" value="{{ old('email') }}" placeholder="Enter your email" required autofocus autocomplete="username">
                                         @error('email')
-                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                                             name="password" placeholder="Enter your password" required autocomplete="current-password">
                                         @error('password')
-                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
@@ -83,9 +85,9 @@
                                             <input class="form-check-input" type="checkbox" name="remember" id="rememberMe">
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
                                         </div>
-                                        
+
                                         @if (Route::has('password.request'))
-                                            <a href="{{ route('password.request') }}" class="text-success small">Forgot Password?</a>
+                                        <a href="{{ route('password.request') }}" class="text-success small">Forgot Password?</a>
                                         @endif
                                     </div>
 
@@ -100,45 +102,46 @@
                             <div class="tab-pane fade {{ $isRegisterActive ? 'show active' : '' }}" id="register" role="tabpanel">
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
+                                    <input type="hidden" name="redirect_to" value="{{ request('redirect_to') }}">
 
                                     <div class="row">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" 
+                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                                 name="name" value="{{ old('name') }}" placeholder="John" required autofocus>
                                             @error('name')
-                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
-                            
+
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="email_register" class="form-label">Email Address</label>
                                         {{-- Note: name='email' is correct for the controller --}}
-                                        <input id="email_register" type="email" class="form-control @error('email') is-invalid @enderror" 
+                                        <input id="email_register" type="email" class="form-control @error('email') is-invalid @enderror"
                                             name="email" value="{{ old('email') }}" placeholder="you@example.com" required autocomplete="username">
                                         @error('email')
-                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="password_register" class="form-label">Password</label>
                                         {{-- Note: name='password' is correct for the controller --}}
-                                        <input id="password_register" type="password" class="form-control @error('password') is-invalid @enderror" 
+                                        <input id="password_register" type="password" class="form-control @error('password') is-invalid @enderror"
                                             name="password" placeholder="Enter password" required autocomplete="new-password">
                                         @error('password')
-                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
                                     <div class="mb-4">
                                         <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                        <input id="password_confirmation" type="password" class="form-control @error('password_confirmation') is-invalid @enderror" 
+                                        <input id="password_confirmation" type="password" class="form-control @error('password_confirmation') is-invalid @enderror"
                                             name="password_confirmation" placeholder="Confirm password" required autocomplete="new-password">
                                         @error('password_confirmation')
-                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
@@ -196,9 +199,10 @@
     .btn-success:hover {
         background-color: #157347;
     }
-    
+
     .invalid-feedback {
-        display: block; /* Ensure Laravel errors show correctly with custom CSS */
+        display: block;
+        /* Ensure Laravel errors show correctly with custom CSS */
     }
 </style>
 @endsection
