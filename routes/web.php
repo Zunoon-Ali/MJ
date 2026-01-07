@@ -40,7 +40,7 @@ Route::middleware(['auth', 'user'])->group(function () {
         $userId = Auth::id();
 
         // Get user's purchased products (from order items)
-        $purchasedProducts = \App\Models\OrderItem::whereHas('order', function ($query) use ($userId) {
+        $purchasedProducts = OrderItem::whereHas('order', function ($query) use ($userId) {
             $query->where('user_id', $userId);
         })->with(['product', 'order'])->latest()->get();
 
